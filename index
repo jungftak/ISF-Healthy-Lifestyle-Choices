@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>ISF Wellness Hub 🌟</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+/* =============================================
+   VARIABLES & RESET
+============================================= */
+:root {
+  --blue:   #004086;
+  --blue2:  #0060C0;
+  --blue3:  #0099E6;
+  --pale:   #EAF2FF;
+  --green:  #27AE60;
+  --gpale:  #E9F7EF;
+  --orange: #E67E22;
+  --opale:  #FEF3E8;
+  --purple: #8E44AD;
+  --ppale:  #F5EEF8;
+  --coral:  #E74C3C;
+  --yellow: #F1C40F;
+  --bg:     #F0F4F8;
+  --text:   #1A2940;
+  --mid:    #4A5568;
+  --shad:   0 4px 20px rgba(0,0,0,0.09);
+  --shadlg: 0 8px 32px rgba(0,0,0,0.14);
+  --rad:    20px;
+  --rads:   12px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--text);-webkit-tap-highlight-color:transparent}
+img{max-width:100%;display:block}
+button{touch-action:manipulation;cursor:pointer}
+
+/* =============================================
+   NAVIGATION
+============================================= */
+nav{background:var(--blue);position:sticky;top:0;z-index:999;box-shadow:0 2px 12px rgba(0,0,0,.25)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:10px 18px;max-width:1200px;margin:0 auto;gap:8px;flex-wrap:wrap}
+.nav-brand{display:flex;align-items:center;gap:10px;cursor:pointer}
+.nav-brand img{height:40px;filter:brightness(0) invert(1);object-fit:contain}
+.brand-txt{color:#fff;font-weight:900;font-size:15px;line-height:1.15}
+.brand-txt span{font-size:11px;font-weight:600;opacity:.8;display:block}
+.nav-links{display:flex;gap:4px;flex-wrap:wrap;align-items:center}
+.nb{background:transparent;border:2px solid transparent;color:rgba(255,255,255,.82);padding:7px 11px;border-radius:10px;font-family:'Nunito',sans-serif;font-weight:700;font-size:13px;white-space:nowrap;transition:all .2s}
+.nb:hover,.nb.active{background:rgba(255,255,255,.18);border-color:rgba(255,255,255,.35);color:#fff}
+.nb-lang{background:#fff!important;color:var(--blue)!important;border-color:#fff!important;font-weight:900!important;border-radius:30px!important;padding:6px 14px!important}
+.nb-lang:hover{background:var(--pale)!important}
+
+/* =============================================
+   PAGES
+============================================= */
+.page{display:none}
+.page.active{display:block}
+.hidden{display:none!important}
+
+/* =============================================
+   SHARED
+============================================= */
+.wrap{max-width:1100px;margin:0 auto;padding:40px 20px}
+.st{text-align:center;margin-bottom:34px}
+.st h2{font-size:28px;font-weight:900;color:var(--blue);margin-bottom:8px}
+.st p{font-size:16px;color:var(--mid)}
+.btn-cta{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--blue),var(--blue2));color:#fff;border:none;padding:15px 32px;border-radius:50px;font-family:'Nunito',sans-serif;font-weight:900;font-size:17px;box-shadow:0 4px 16px rgba(0,64,134,.38);transition:all .3s}
+.btn-cta:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,64,134,.48)}
+.btn-out{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--blue);border:2.5px solid var(--blue);padding:13px 28px;border-radius:50px;font-family:'Nunito',sans-serif;font-weight:800;font-size:16px;transition:all .3s}
+.btn-out:hover{background:var(--pale)}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes pop{0%{transform:scale(.4);opacity:0}70%{transform:scale(1.15)}100%{transform:scale(1);opacity:1}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.fadeup{animation:fadeUp .35s ease forwards}
+
+/* =============================================
+   HOME
+============================================= */
+.hero{background:linear-gradient(140deg,#003272 0%,var(--blue) 45%,var(--blue2) 75%,var(--blue3) 100%);padding:56px 20px 60px;text-align:center;position:relative;overflow:hidden}
+.hero::before,.hero::after{content:'';position:absolute;border-radius:50%;background:rgba(255,255,255,.05);pointer-events:none}
+.hero::before{width:380px;height:380px;top:-90px;right:-60px}
+.hero::after{width:250px;height:250px;bottom:-90px;left:-30px}
+.hero-in{position:relative;z-index:1;max-width:800px;margin:0 auto}
+.hero-mascot{width:125px;height:125px;object-fit:contain;margin:0 auto 18px;animation:float 3s ease-in-out infinite}
+.hero h1{font-size:38px;font-weight:900;color:#fff;line-height:1.2;margin-bottom:14px}
+.hero p{font-size:17px;color:rgba(255,255,255,.9);max-width:580px;margin:0 auto 28px;line-height:1.6}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.pc{border-radius:var(--rad);padding:32px 22px;text-align:center;cursor:pointer;transition:transform .3s,box-shadow .3s;box-shadow:var(--shad)}
+.pc:hover{transform:translateY(-6px);box-shadow:var(--shadlg)}
+.pc.nut{background:linear-gradient(145deg,#27AE60,#1E8449)}
+.pc.ex{background:linear-gradient(145deg,#E67E22,#CA6F1E)}
+.pc.slp{background:linear-gradient(145deg,#8E44AD,#76359D)}
+.pc-icon{font-size:52px;margin-bottom:14px;display:block}
+.pc h3{font-size:22px;font-weight:900;color:#fff;margin-bottom:8px}
+.pc p{font-size:14px;color:rgba(255,255,255,.88);line-height:1.5;margin-bottom:16px}
+.pc-btn{background:rgba(255,255,255,.22);border:2px solid rgba(255,255,255,.45);color:#fff;padding:8px 20px;border-radius:30px;font-family:'Nunito',sans-serif;font-weight:700;font-size:13px;transition:background .2s}
+.pc-btn:hover{background:rgba(255,255,255,.38)}
+.vals{background:linear-gradient(135deg,#003272,var(--blue));border-radius:var(--rad);padding:36px 24px;text-align:center;margin-top:36px}
+.vals img{height:46px;object-fit:contain;filter:brightness(0) invert(1);margin:0 auto 14px}
+.vals h3{font-size:22px;font-weight:900;color:#fff;margin-bottom:10px}
+.vals p{font-size:14px;color:rgba(255,255,255,.88);max-width:620px;margin:0 auto 18px;line-height:1.6}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.chip{background:rgba(255,255,255,.18);border:1.5px solid rgba(255,255,255,.38);color:#fff;padding:6px 16px;border-radius:30px;font-size:13px;font-weight:700}
+.cta-card{background:#fff;border-radius:var(--rad);box-shadow:var(--shad);padding:40px 30px;text-align:center;margin-top:36px}
+.cta-card img{width:80px;margin:0 auto 16px}
+.cta-card h2{font-size:26px;font-weight:900;color:var(--blue);margin-bottom:10px}
+.cta-card p{font-size:15px;color:var(--mid);margin-bottom:24px;max-width:500px;margin-left:auto;margin-right:auto;line-height:1.6}
+
+/* =============================================
+   QUIZ — START SCREEN
+============================================= */
+.qs-start{text-align:center;padding:50px 20px;max-width:680px;margin:0 auto}
+.qs-start img{width:110px;margin:0 auto 18px}
+.qs-start h2{font-size:32px;font-weight:900;color:var(--blue);margin-bottom:14px}
+.qs-start p{font-size:16px;color:var(--mid);margin-bottom:26px;line-height:1.6}
+.info-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:22px}
+.inf{background:#fff;border-radius:var(--rads);padding:14px 20px;box-shadow:0 2px 8px rgba(0,0,0,.07);text-align:center;min-width:118px}
+.inf .big{font-size:28px;font-weight:900;color:var(--blue);display:block;line-height:1;margin-bottom:4px}
+.inf .lbl{font-size:13px;font-weight:700;color:var(--mid)}
+.bdg-row{font-size:14px;color:var(--mid);font-weight:700;margin-bottom:26px}
+
+/* =============================================
+   QUIZ — QUESTION SCREEN
+============================================= */
+.q-wrap{max-width:760px;margin:0 auto;padding:24px 20px 40px}
+.prog-track{background:#DDE3EC;height:10px;border-radius:8px;overflow:hidden;margin-bottom:6px}
+.prog-fill{height:100%;border-radius:8px;background:linear-gradient(90deg,var(--blue),var(--blue3));transition:width .5s ease,background .5s}
+.prog-lbl{text-align:right;font-size:12px;font-weight:700;color:var(--mid);margin-bottom:20px}
+.q-card{background:#fff;border-radius:var(--rad);box-shadow:var(--shad);padding:30px 26px;margin-bottom:16px;border-left:5px solid #DDE3EC}
+.q-card.cat-nutrition{border-left-color:var(--green)}
+.q-card.cat-exercise{border-left-color:var(--orange)}
+.q-card.cat-sleep{border-left-color:var(--purple)}
+.cat-badge{display:inline-block;padding:4px 14px;border-radius:20px;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;margin-bottom:12px}
+.cn{background:var(--gpale);color:var(--green)}
+.ce{background:var(--opale);color:var(--orange)}
+.cs{background:var(--ppale);color:var(--purple)}
+.q-num{font-size:12px;color:var(--mid);font-weight:700;margin-bottom:5px}
+.q-text{font-size:19px;font-weight:800;line-height:1.45;margin-bottom:22px}
+.mc-grid{display:grid;gap:10px}
+.mc-opt{display:flex;align-items:center;gap:12px;background:#F6F9FC;border:2.5px solid #DDE3EC;border-radius:12px;padding:14px 18px;font-family:'Nunito',sans-serif;font-size:15px;font-weight:700;color:var(--text);text-align:left;transition:all .2s;width:100%}
+.mc-opt:hover{border-color:var(--blue2);background:var(--pale)}
+.mc-opt.sel{border-color:var(--blue);background:var(--pale);color:var(--blue)}
+.mc-ltr{width:30px;height:30px;border-radius:50%;background:var(--pale);color:var(--blue);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:13px;flex-shrink:0;transition:all .2s}
+.mc-opt.sel .mc-ltr{background:var(--blue);color:#fff}
+.tf-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.tf-opt{border:3px solid #DDE3EC;border-radius:var(--rad);padding:22px 14px;font-family:'Nunito',sans-serif;font-size:20px;font-weight:900;text-align:center;transition:all .22s}
+.tf-t{background:var(--gpale);color:var(--green)}
+.tf-f{background:#FDECEA;color:var(--coral)}
+.tf-t.sel{background:var(--green);color:#fff;border-color:var(--green)}
+.tf-f.sel{background:var(--coral);color:#fff;border-color:var(--coral)}
+.freq-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.freq-opt{border:2.5px solid #DDE3EC;border-radius:12px;padding:14px 6px;font-family:'Nunito',sans-serif;font-size:12px;font-weight:700;text-align:center;background:#F6F9FC;transition:all .2s;color:var(--text)}
+.fe{font-size:26px;display:block;margin-bottom:5px}
+.freq-opt:hover,.freq-opt.sel{border-color:var(--blue);background:var(--pale);color:var(--blue)}
+.fact-strip{background:linear-gradient(135deg,#FFFBEA,#FFF3CD);border-left:4px solid var(--yellow);border-radius:0 12px 12px 0;padding:14px 18px;margin-top:22px;display:flex;gap:12px;align-items:flex-start}
+.fact-strip p{font-size:13px;font-weight:700;color:#7D6608;line-height:1.55}
+.qnav{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.mascot-row{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--mid);font-weight:700;flex:1}
+.mascot-row img{width:38px;flex-shrink:0}
+.btn-next{background:linear-gradient(135deg,var(--blue),var(--blue2));color:#fff;border:none;padding:13px 28px;border-radius:50px;font-family:'Nunito',sans-serif;font-weight:800;font-size:15px;box-shadow:0 4px 14px rgba(0,64,134,.32);transition:all .3s;white-space:nowrap}
+.btn-next:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,64,134,.42)}
+.btn-next:disabled{background:#CBD5E0;box-shadow:none;cursor:not-allowed;transform:none}
+.btn-prev{background:#fff;color:var(--mid);border:2px solid #DDE3EC;padding:11px 18px;border-radius:50px;font-family:'Nunito',sans-serif;font-weight:700;font-size:14px;transition:all .2s;white-space:nowrap}
+.btn-prev:hover{border-color:var(--blue);color:var(--blue)}
+.btn-prev:disabled{opacity:.3;cursor:default}
+
+/* =============================================
+   QUIZ — RESULTS
+============================================= */
+.res-hero{background:linear-gradient(140deg,#003272,var(--blue),var(--blue2));padding:50px 20px 70px;text-align:center}
+.res-badge{font-size:80px;display:block;margin-bottom:12px;animation:pop .6s ease}
+.res-title{font-size:30px;font-weight:900;color:#fff;margin-bottom:8px}
+.res-sub{font-size:15px;color:rgba(255,255,255,.85);max-width:500px;margin:0 auto;line-height:1.5}
+.score-card{background:#fff;border-radius:var(--rad);box-shadow:var(--shadlg);padding:28px;max-width:640px;margin:-28px auto 0;position:relative;z-index:1}
+.score-big{text-align:center;font-size:60px;font-weight:900;color:var(--blue);line-height:1}
+.score-of{text-align:center;font-size:14px;color:var(--mid);font-weight:700;margin-bottom:26px}
+.cat-row{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.cat-lbl{width:110px;font-weight:800;font-size:13px;flex-shrink:0}
+.cat-track{flex:1;background:#E4EAF0;height:13px;border-radius:8px;overflow:hidden}
+.cat-fill{height:100%;border-radius:8px;transition:width 1s ease}
+.cf-n{background:linear-gradient(90deg,#27AE60,#2ECC71)}
+.cf-e{background:linear-gradient(90deg,#E67E22,#F39C12)}
+.cf-s{background:linear-gradient(90deg,#8E44AD,#9B59B6)}
+.cat-val{font-weight:800;font-size:13px;width:46px;text-align:right}
+.tips-wrap{max-width:640px;margin:22px auto;padding:0 20px}
+.tips-hdg{font-size:22px;font-weight:900;color:var(--blue);text-align:center;margin-bottom:16px}
+.tip-card{background:#fff;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.07);padding:18px 20px;margin-bottom:12px;border-left:4px solid;display:flex;gap:14px;align-items:flex-start}
+.tip-card.tn{border-color:var(--green)}
+.tip-card.te{border-color:var(--orange)}
+.tip-card.ts{border-color:var(--purple)}
+.tip-icon{font-size:22px;flex-shrink:0}
+.tip-text{font-size:14px;line-height:1.6}
+.lm-row{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:22px}
+.lm-chip{background:#fff;border-radius:12px;padding:14px 18px;box-shadow:0 2px 8px rgba(0,0,0,.07);text-align:center;cursor:pointer;transition:transform .2s;min-width:148px;border:2px solid transparent}
+.lm-chip:hover{transform:translateY(-3px);border-color:var(--pale)}
+.lm-emoji{font-size:30px;display:block;margin-bottom:4px}
+.lm-name{font-size:13px;font-weight:800}
+.lm-pct{font-size:12px;color:var(--mid);font-weight:700}
+.res-acts{text-align:center;padding:22px 20px 36px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+
+/* =============================================
+   FACT PAGE HEROES
+============================================= */
+.fact-hero{padding:50px 20px;text-align:center}
+.fh-n{background:linear-gradient(135deg,#1E8449,#27AE60,#2ECC71)}
+.fh-e{background:linear-gradient(135deg,#CA6F1E,#E67E22,#F39C12)}
+.fh-s{background:linear-gradient(135deg,#6C3483,#8E44AD,#9B59B6)}
+.fh-c{background:linear-gradient(140deg,#003272,var(--blue),var(--blue2))}
+.fh-icon{font-size:60px;margin-bottom:12px}
+.fact-hero h1{font-size:34px;font-weight:900;color:#fff;margin-bottom:10px}
+.fact-hero p{font-size:16px;color:rgba(255,255,255,.9);max-width:580px;margin:0 auto;line-height:1.6}
+.tap-bar{background:#fff;padding:16px 20px;text-align:center}
+.tap-bar p{font-size:15px;font-weight:700;color:var(--mid)}
+
+/* =============================================
+   FLIP CARDS
+============================================= */
+.flip-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:1050px;margin:0 auto;padding:34px 20px}
+.fc{height:225px;perspective:1000px;cursor:pointer}
+.fc-in{width:100%;height:100%;position:relative;transform-style:preserve-3d;transition:transform .6s cubic-bezier(.4,0,.2,1)}
+.fc.flip .fc-in{transform:rotateY(180deg)}
+.fc-front,.fc-back{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:var(--rad);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px 16px;text-align:center;box-shadow:var(--shad)}
+.fc-back{transform:rotateY(180deg)}
+.fc-front .fce{font-size:46px;margin-bottom:10px}
+.fc-front h4{font-size:15px;font-weight:800;margin-bottom:4px}
+.fc-front .fch{font-size:11px;font-weight:600;opacity:.65}
+.fc-back p{font-size:13px;line-height:1.6;font-weight:700}
+.fc-back .fcs{font-size:11px;opacity:.72;margin-top:10px;font-weight:600}
+.ff-n{background:linear-gradient(145deg,#E9F7EF,#D5F5E3);color:#1A6E3C}
+.fb-n{background:linear-gradient(145deg,#27AE60,#1E8449);color:#fff}
+.ff-e{background:linear-gradient(145deg,#FEF3E8,#FDEBD0);color:#7D4B0A}
+.fb-e{background:linear-gradient(145deg,#E67E22,#CA6F1E);color:#fff}
+.ff-s{background:linear-gradient(145deg,#F5EEF8,#E8DAEF);color:#5B2C6F}
+.fb-s{background:linear-gradient(145deg,#8E44AD,#76359D);color:#fff}
+.ff-c{background:linear-gradient(145deg,#EAF2FF,#D6E8FF);color:#0A3070}
+.fb-c{background:linear-gradient(145deg,var(--blue),var(--blue2));color:#fff}
+
+/* =============================================
+   INFO BOXES
+============================================= */
+.ib{border:2px solid;border-radius:var(--rads);padding:20px 22px;display:flex;gap:14px;align-items:flex-start;max-width:1050px;margin:0 auto 28px}
+.ib-or{background:linear-gradient(135deg,#FEF3E8,#FDEBD0);border-color:var(--orange)}
+.ib-rd{background:linear-gradient(135deg,#FDECEA,#FDECEA);border-color:var(--coral)}
+.ib-icon{font-size:26px;flex-shrink:0}
+.ib-or .ib-title,.ib-or .ib-body{color:#7D4B0A}
+.ib-rd .ib-title,.ib-rd .ib-body{color:#6B1D1D}
+.ib-title{font-weight:800;font-size:15px;margin-bottom:4px}
+.ib-body{font-size:13px;line-height:1.6;font-weight:600}
+
+/* =============================================
+   CONNECT PAGE
+============================================= */
+.cc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;max-width:900px;margin:0 auto}
+.cc{background:#fff;border-radius:var(--rad);box-shadow:var(--shad);padding:24px;border-top:5px solid}
+.cc h3{font-size:18px;font-weight:900;margin-bottom:10px}
+.cc p{font-size:14px;line-height:1.65;color:var(--mid)}
+
+/* =============================================
+   SOURCES & FOOTER
+============================================= */
+.sources{background:#E4EAF0;padding:16px 20px;text-align:center}
+.sources p{font-size:12px;color:var(--mid);font-weight:700}
+footer{background:var(--blue);color:rgba(255,255,255,.78);text-align:center;padding:22px 20px;font-size:13px}
+footer strong{color:#fff}
+
+/* =============================================
+   RESPONSIVE
+============================================= */
+@media(max-width:900px){
+  .pillars,.cc-grid{grid-template-columns:repeat(2,1fr)}
+  .flip-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:640px){
+  .hero h1{font-size:26px}
+  .pillars{grid-template-columns:1fr}
+  .freq-grid{grid-template-columns:repeat(2,1fr)}
+  .q-text{font-size:17px}
+  .res-badge{font-size:64px}
+  .brand-txt{display:none}
+  .cc-grid{grid-template-columns:1fr}
+  .fact-hero h1{font-size:26px}
+}
+@media(max-width:420px){
+  .flip-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- ==========================================
+     NAVIGATION
+========================================== -->
+<nav>
+  <div class="nav-in">
+    <div class="nav-brand" onclick="gotoPage('home')">
+      <img src="https://tass-asia.org/wp-content/uploads/2021/12/ISFIdentityJpg-Edited-e1675850234220.png" alt="ISF Academy">
+      <div class="brand-txt">Wellness Hub <span>The ISF Academy</span></div>
+    </div>
+    <div class="nav-links">
+      <button class="nb active" data-page="home"      onclick="gotoPage('home')"      data-en="🏠 Home"      data-zh="🏠 首頁">🏠 Home</button>
+      <button class="nb"        data-page="quiz"      onclick="gotoPage('quiz')"      data-en="🧠 Quiz"      data-zh="🧠 測驗">🧠 Quiz</button>
+      <button class="nb"        data-page="nutrition" onclick="gotoPage('nutrition')" data-en="🥦 Nutrition" data-zh="🥦 營養">🥦 Nutrition</button>
+      <button class="nb"        data-page="exercise"  onclick="gotoPage('exercise')"  data-en="🏃 Exercise"  data-zh="🏃 運動">🏃 Exercise</button>
+      <button class="nb"        data-page="sleep"     onclick="gotoPage('sleep')"     data-en="😴 Sleep"     data-zh="😴 睡眠">😴 Sleep</button>
+      <button class="nb"        data-page="connect"   onclick="gotoPage('connect')"   data-en="💙 Connect"   data-zh="💙 連繫">💙 Connect</button>
+      <button class="nb nb-lang" id="langBtn" onclick="toggleLang()">中文</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ==========================================
+     HOME PAGE
+========================================== -->
+<div id="pg-home" class="page active">
+  <div class="hero">
+    <div class="hero-in">
+      <img class="hero-mascot" src="https://whatsticker.online/stickers_asset/ws-pack-419479zFRuL0P/20026ccb71619a.png" alt="Wellness Mascot">
+      <h1 data-en="Welcome to the ISF Wellness Hub! 🌟" data-zh="歡迎來到弘立健康中心！🌟">Welcome to the ISF Wellness Hub! 🌟</h1>
+      <p data-en="Discover how to feel your very best every single day! Explore nutrition, exercise and sleep — then take our Wellness Quiz to find out just how healthy your habits really are. 💪" data-zh="探索如何每天保持最佳狀態！了解營養、運動和睡眠——然後參加我們的健康測驗，看看你的習慣有多健康。💪">Discover how to feel your very best every single day! Explore nutrition, exercise and sleep — then take our Wellness Quiz to find out just how healthy your habits really are. 💪</p>
+      <button class="btn-cta" onclick="gotoPage('quiz')" data-en="Take the Wellness Quiz ➜" data-zh="開始健康測驗 ➜">Take the Wellness Quiz ➜</button>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="st">
+      <h2 data-en="Your Three Pillars of Wellness 🏛️" data-zh="健康的三大支柱 🏛️">Your Three Pillars of Wellness 🏛️</h2>
+      <p data-en="Great health is built on three foundations. Tap each one to explore!" data-zh="良好的健康建立在三個基礎上。點擊每個來探索！">Great health is built on three foundations. Tap each one to explore!</p>
+    </div>
+    <div class="pillars">
+      <div class="pc nut" onclick="gotoPage('nutrition')">
+        <span class="pc-icon">🥦</span>
+        <h3 data-en="Nutrition" data-zh="營養">Nutrition</h3>
+        <p data-en="Food is fuel for your brain and body! Discover what to eat for a healthy, happy life." data-zh="食物是你大腦和身體的燃料！探索如何吃得健康快樂。">Food is fuel for your brain and body! Discover what to eat for a healthy, happy life.</p>
+        <button class="pc-btn" data-en="Explore Nutrition ➜" data-zh="探索營養 ➜">Explore Nutrition ➜</button>
+      </div>
+      <div class="pc ex" onclick="gotoPage('exercise')">
+        <span class="pc-icon">🏃</span>
+        <h3 data-en="Exercise" data-zh="運動">Exercise</h3>
+        <p data-en="Move your body, boost your mood! Find out how physical activity keeps you strong and happy." data-zh="活動身體，提升心情！了解體育活動如何讓你強壯快樂。">Move your body, boost your mood! Find out how physical activity keeps you strong and happy.</p>
+        <button class="pc-btn" data-en="Explore Exercise ➜" data-zh="探索運動 ➜">Explore Exercise ➜</button>
+      </div>
+      <div class="pc slp" onclick="gotoPage('sleep')">
+        <span class="pc-icon">😴</span>
+        <h3 data-en="Sleep" data-zh="睡眠">Sleep</h3>
+        <p data-en="Sleep is your superpower! Learn why a great night's rest is one of the very best things you can do for yourself." data-zh="睡眠是你的超能力！了解為什麼良好的休息是你能為自己做的最好事情之一。">Sleep is your superpower! Learn why a great night's rest is one of the very best things you can do for yourself.</p>
+        <button class="pc-btn" data-en="Explore Sleep ➜" data-zh="探索睡眠 ➜">Explore Sleep ➜</button>
+      </div>
+    </div>
+
+    <div class="vals">
+      <img src="https://tass-asia.org/wp-content/uploads/2021/12/ISFIdentityJpg-Edited-e1675850234220.png" alt="ISF Logo">
+      <h3 data-en="Wellness and our ISF Values 💙" data-zh="健康與弘立校訓 💙">Wellness and our ISF Values 💙</h3>
+      <p data-en="At ISF, our eight values guide everything we do — including how we look after ourselves. Caring for your body, mind and sleep reflects Balance, Harmony, Commitment and Care." data-zh="在弘立，我們的八大校訓指導我們所做的一切——包括我們如何照顧自己。照顧好身體、思想和睡眠，體現了平衡、和諧、承諾和關愛的精神。">At ISF, our eight values guide everything we do — including how we look after ourselves. Caring for your body, mind and sleep reflects Balance, Harmony, Commitment and Care.</p>
+      <div class="chips">
+        <span class="chip" data-en="⚖️ Balance"    data-zh="⚖️ 平衡">⚖️ Balance</span>
+        <span class="chip" data-en="🌿 Harmony"    data-zh="🌿 和諧">🌿 Harmony</span>
+        <span class="chip" data-en="💪 Commitment" data-zh="💪 承諾">💪 Commitment</span>
+        <span class="chip" data-en="❤️ Care"       data-zh="❤️ 關愛">❤️ Care</span>
+        <span class="chip" data-en="🔥 Passion"    data-zh="🔥 熱情">🔥 Passion</span>
+        <span class="chip" data-en="🎖️ Integrity"  data-zh="🎖️ 正直">🎖️ Integrity</span>
+        <span class="chip" data-en="🤝 Respect"    data-zh="🤝 尊重">🤝 Respect</span>
+        <span class="chip" data-en="🌟 Courtesy"   data-zh="🌟 禮貌">🌟 Courtesy</span>
+      </div>
+    </div>
+
+    <div class="cta-card">
+      <img src="https://whatsticker.online/stickers_asset/ws-pack-419479zFRuL0P/20026ccb71619a.png" alt="Mascot">
+      <h2 data-en="Ready to discover your Wellness Level? 🎯" data-zh="準備好發現你的健康等級了嗎？🎯">Ready to discover your Wellness Level? 🎯</h2>
+      <p data-en="Take our 20-question quiz covering nutrition, exercise and sleep. Earn your badge and receive personalised tips — just for you!" data-zh="參加我們涵蓋營養、運動和睡眠的20題測驗。獲得你的徽章並獲得專屬個人化建議！">Take our 20-question quiz covering nutrition, exercise and sleep. Earn your badge and receive personalised tips — just for you!</p>
+      <button class="btn-cta" onclick="gotoPage('quiz')" data-en="🧠 Start the Quiz!" data-zh="🧠 開始測驗！">🧠 Start the Quiz!</button>
+    </div>
+  </div>
+</div>
+
+<!-- ==========================================
+     QUIZ PAGE
+========================================== -->
+<div id="pg-quiz" class="page">
+
+  <!-- Start Screen -->
+  <div id="qs-start" class="qs-start">
+    <img src="https://whatsticker.online/stickers_asset/ws-pack-419479zFRuL0P/20026ccb71619a.png" alt="Mascot">
+    <h2 data-en="The ISF Wellness Quiz 🧠" data-zh="弘立健康測驗 🧠">The ISF Wellness Quiz 🧠</h2>
+    <p data-en="Answer 20 questions about your habits and health knowledge. Be honest — this quiz is just for you! At the end you will earn a badge and receive personalised tips. 😊" data-zh="回答20個關於你習慣和健康知識的問題。請誠實回答——這個測驗只是為你服務！最後你將獲得徽章和個人化建議。😊">Answer 20 questions about your habits and health knowledge. Be honest — this quiz is just for you! At the end you will earn a badge and receive personalised tips. 😊</p>
+    <div class="info-row">
+      <div class="inf"><span class="big">20</span><span class="lbl" data-en="Questions" data-zh="問題">Questions</span></div>
+      <div class="inf"><span class="big">3</span><span class="lbl" data-en="Categories" data-zh="類別">Categories</span></div>
+      <div class="inf"><span class="big">🏆</span><span class="lbl" data-en="Earn a Badge!" data-zh="獲得徽章！">Earn a Badge!</span></div>
+    </div>
+    <p class="bdg-row" data-en="🌱 Wellness Beginner &nbsp;·&nbsp; 🌟 Wellness Explorer &nbsp;·&nbsp; 🏆 Wellness Champion" data-zh="🌱 健康新手 &nbsp;·&nbsp; 🌟 健康探索者 &nbsp;·&nbsp; 🏆 健康冠軍">🌱 Wellness Beginner &nbsp;·&nbsp; 🌟 Wellness Explorer &nbsp;·&nbsp; 🏆 Wellness Champion</p>
+    <button class="btn-cta" onclick="startQuiz()" data-en="Let's Go! ➜" data-zh="出發！ ➜">Let's Go! ➜</button>
+  </div>
+
+  <!-- Question Screen -->
+  <div id="qs-question" class="hidden">
+    <div class="q-wrap">
+      <div class="prog-track"><div class="prog-fill" id="progFill" style="width:5%"></div></div>
+      <div class="prog-lbl" id="progLbl">Question 1 of 20</div>
+      <div class="q-card" id="qCard"></div>
+      <div class="qnav">
+        <button class="btn-prev" id="btnPrev" onclick="prevQ()" disabled data-en="← Back" data-zh="← 返回">← Back</button>
+        <div class="mascot-row">
+          <img src="https://whatsticker.online/stickers_asset/ws-pack-419479zFRuL0P/20026ccb71619a.png" alt="">
+          <span id="mascotMsg">Choose an answer to continue! 😊</span>
+        </div>
+        <button class="btn-next" id="btnNext" onclick="nextQ()" disabled data-en="Next ➜" data-zh="下一題 ➜">Next ➜</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Results Screen -->
+  <div id="qs-results" class="hidden">
+    <div class="res-hero">
+      <span class="res-badge" id="resBadge">🌟</span>
+      <div class="res-title" id="resTitle">Wellness Explorer!</div>
+      <div class="res-sub"   id="resSub">Great work! Keep going!</div>
+    </div>
+    <div class="score-card" id="scoreCard">
+      <div class="score-big" id="scoreBig">0</div>
+      <div class="score-of"  id="scoreOf">out of 40 points</div>
+      <div class="cat-row">
+        <div class="cat-lbl" id="catLblN">🥦 Nutrition</div>
+        <div class="cat-track"><div class="cat-fill cf-n" id="barN" style="width:0%"></div></div>
+        <div class="cat-val"  id="valN">0/14</div>
+      </div>
+      <div class="cat-row">
+        <div class="cat-lbl" id="catLblE">🏃 Exercise</div>
+        <div class="cat-track"><div class="cat-fill cf-e" id="barE" style="width:0%"></div></div>
+        <div class="cat-val"  id="valE">0/14</div>
+      </div>
+      <div class="cat-row">
+        <div class="cat-lbl" id="catLblS">😴 Sleep</div>
+        <div class="cat-track"><div class="cat-fill cf-s" id="barS" style="width:0%"></div></div>
+        <div class="cat-val"  id="valS">0/12</div>
+      </div>
+    </div>
+    <div class="tips-wrap">
+      <div class="tips-hdg" id="tipsHdg">Your Personal Wellness Tips 💡</div>
+      <div id="tipsBody"></div>
+      <div class="lm-row" id="lmRow"></div>
+    </div>
+    <div class="res-acts">
+      <button class="btn-cta" onclick="retakeQuiz()" data-en="🔄 Retake Quiz"    data-zh="🔄 重新測驗">🔄 Retake Quiz</button>
+      <button class="btn-out"  onclick="gotoPage('home')" data-en="🏠 Back to Home" data-zh="🏠 返回首頁">🏠 Back to Home</button>
+    </div>
+    <div class="sources">
+      <p data-en="Sources: NHS UK · World Health Organisation (WHO) · Hong Kong Department of Health · CDC" data-zh="資料來源：英國NHS · 世界衛生組織 · 香港衛生署 · 美國CDC">Sources: NHS UK · World Health Organisation (WHO) · Hong Kong Department of Health · CDC</p>
+    </div>
+  </div>
+</div>
+
+<!-- ==========================================
+     NUTRITION PAGE
+========================================== -->
+<div id="pg-nutrition" class="page">
+  <div class="fact-hero fh-n">
+    <div class="fh-icon">🥦</div>
+    <h1 data-en="Nutrition: Fuel Your Brain!" data-zh="營養：為你的大腦加油！">Nutrition: Fuel Your Brain!</h1>
+    <p data-en="What you eat has a huge impact on how you feel, how well you concentrate and how much energy you have to learn and play! 🍎" data-zh="你吃什麼對你的感受、專注程度和學習遊玩的精力有著巨大影響！🍎">What you eat has a huge impact on how you feel, how well you concentrate and how much energy you have to learn and play! 🍎</p>
+  </div>
+  <div class="tap-bar"><p data-en="👇 Tap any card to reveal an amazing fact!" data-zh="👇 點擊任何卡片來揭示驚人的事實！">👇 Tap any card to reveal an amazing fact!</p></div>
+  <div class="flip-grid" id="grid-nutrition"></div>
+  <div class="wrap" style="padding-top:0">
+    <div class="ib ib-or">
+      <div class="ib-icon">🍔</div>
+      <div>
+        <div class="ib-title" data-en="A note about fast food in Hong Kong 🇭🇰" data-zh="關於香港快餐的說明 🇭🇰">A note about fast food in Hong Kong 🇭🇰</div>
+        <div class="ib-body"  data-en="Hong Kong is home to many popular fast food restaurants, including McDonald's, KFC and Café de Coral. These can be enjoyed as an occasional treat — but eating fast food regularly means consuming a lot of hidden salt, saturated fat and added sugar. The key is balance! Aim to enjoy home-cooked or freshly prepared meals most of the time. 🏠" data-zh="香港擁有許多受歡迎的快餐廳，包括麥當勞、肯德基和大家樂。這些可以作為偶爾的享受——但經常吃快餐意味著攝入大量隱藏的鹽、飽和脂肪和添加糖。關鍵在於平衡！大多數時候要享用家常飯或新鮮烹飪的食物。🏠">Hong Kong is home to many popular fast food restaurants, including McDonald's, KFC and Café de Coral. These can be enjoyed as an occasional treat — but eating fast food regularly means consuming a lot of hidden salt, saturated fat and added sugar. The key is balance! Aim to enjoy home-cooked or freshly prepared meals most of the time. 🏠</div>
+      </div>
+    </div>
+  </div>
+  <div class="sources"><p data-en="Sources: NHS UK Eat Well Guide · WHO Nutrition Guidelines · Hong Kong Department of Health" data-zh="資料來源：英國NHS飲食指南 · 世界衛生組織營養指南 · 香港衛生署">Sources: NHS UK Eat Well Guide · WHO Nutrition Guidelines · Hong Kong Department of Health</p></div>
+</div>
+
+<!-- ==========================================
+     EXERCISE PAGE
+========================================== -->
+<div id="pg-exercise" class="page">
+  <div class="fact-hero fh-e">
+    <div class="fh-icon">🏃</div>
+    <h1 data-en="Exercise: Move to Thrive!" data-zh="運動：動起來，茁壯成長！">Exercise: Move to Thrive!</h1>
+    <p data-en="Physical activity is one of the most powerful things you can do for your health. It does not have to mean sport — dancing, walking, cycling and swimming all count! 🎽" data-zh="體育活動是你能為健康做的最有力的事情之一。它不一定意味著運動——跳舞、步行、騎自行車和游泳都算！🎽">Physical activity is one of the most powerful things you can do for your health. It does not have to mean sport — dancing, walking, cycling and swimming all count! 🎽</p>
+  </div>
+  <div class="tap-bar"><p data-en="👇 Tap any card to reveal an amazing fact!" data-zh="👇 點擊任何卡片來揭示驚人的事實！">👇 Tap any card to reveal an amazing fact!</p></div>
+  <div class="flip-grid" id="grid-exercise"></div>
+  <div class="sources"><p data-en="Sources: WHO Physical Activity Guidelines · NHS UK · Hong Kong Department of Health · CDC" data-zh="資料來源：世界衛生組織體育活動指南 · 英國NHS · 香港衛生署 · 美國CDC">Sources: WHO Physical Activity Guidelines · NHS UK · Hong Kong Department of Health · CDC</p></div>
+</div>
+
+<!-- ==========================================
+     SLEEP PAGE
+========================================== -->
+<div id="pg-sleep" class="page">
+  <div class="fact-hero fh-s">
+    <div class="fh-icon">😴</div>
+    <h1 data-en="Sleep: Your Secret Superpower!" data-zh="睡眠：你的秘密超能力！">Sleep: Your Secret Superpower!</h1>
+    <p data-en="While you sleep, your brain is incredibly busy — sorting memories, processing emotions and helping your body grow! Sleep is not wasted time; it is absolutely essential. 🌙" data-zh="當你睡覺時，你的大腦非常忙碌——整理記憶、處理情緒並幫助你的身體成長！睡眠不是浪費時間；它是絕對必不可少的。🌙">While you sleep, your brain is incredibly busy — sorting memories, processing emotions and helping your body grow! Sleep is not wasted time; it is absolutely essential. 🌙</p>
+  </div>
+  <div class="tap-bar"><p data-en="👇 Tap any card to reveal an amazing fact!" data-zh="👇 點擊任何卡片來揭示驚人的事實！">👇 Tap any card to reveal an amazing fact!</p></div>
+  <div class="flip-grid" id="grid-sleep"></div>
+  <div class="wrap" style="padding-top:0">
+    <div class="ib ib-rd">
+      <div class="ib-icon">📵</div>
+      <div>
+        <div class="ib-title" data-en="Screen time and sleep in Hong Kong ⚠️" data-zh="香港的屏幕時間和睡眠 ⚠️">Screen time and sleep in Hong Kong ⚠️</div>
+        <div class="ib-body"  data-en="Research shows that many children in Hong Kong spend significant time on screens before bed — and this is one of the biggest reasons for poor sleep quality! Screens emit blue light, which tells your brain it is still daytime and prevents you from feeling sleepy. The NHS recommends switching off all screens at least 1 hour before bedtime. Try reading a book, drawing or calm breathing instead. Your sleep will thank you! 📚" data-zh="研究顯示，許多香港兒童在睡前花大量時間使用屏幕——這是睡眠質量差的最大原因之一！屏幕會發出藍光，這會告訴你的大腦現在仍然是白天，阻止你感到困倦。英國NHS建議睡前至少1小時關閉所有屏幕。嘗試閱讀書籍、繪畫或平靜的呼吸代替。你的睡眠會感謝你！📚">Research shows that many children in Hong Kong spend significant time on screens before bed — and this is one of the biggest reasons for poor sleep quality! Screens emit blue light, which tells your brain it is still daytime and prevents you from feeling sleepy. The NHS recommends switching off all screens at least 1 hour before bedtime. Try reading a book, drawing or calm breathing instead. Your sleep will thank you! 📚</div>
+      </div>
+    </div>
+  </div>
+  <div class="sources"><p data-en="Sources: NHS UK · WHO · Healthier Together NHS · Hong Kong Department of Health" data-zh="資料來源：英國NHS · 世界衛生組織 · 更健康共同NHS · 香港衛生署">Sources: NHS UK · WHO · Healthier Together NHS · Hong Kong Department of Health</p></div>
+</div>
+
+<!-- ==========================================
+     CONNECT PAGE
+========================================== -->
+<div id="pg-connect" class="page">
+  <div class="fact-hero fh-c">
+    <div class="fh-icon">💙</div>
+    <h1 data-en="Why It All Connects!" data-zh="為什麼這一切都息息相關！">Why It All Connects!</h1>
+    <p data-en="Nutrition, exercise and sleep do not work alone — they are a powerful team! And they all connect to your mental wellbeing and happiness too. 🌈" data-zh="營養、運動和睡眠不僅僅單獨起作用——它們是一個強大的團隊！它們也都與你的心理健康和幸福感息息相關。🌈">Nutrition, exercise and sleep do not work alone — they are a powerful team! And they all connect to your mental wellbeing and happiness too. 🌈</p>
+  </div>
+
+  <div class="wrap">
+    <div class="cc-grid">
+      <div class="cc" style="border-color:var(--green)">
+        <h3 style="color:var(--green)">🥦 Nutrition and Your Mood</h3>
+        <p data-en="Did you know that certain foods can actually affect how you feel? The NHS confirms that a balanced diet rich in vegetables, whole grains and protein supports healthy brain function and stable moods. Eating too much sugar causes energy spikes followed by crashes — leaving you feeling irritable, anxious or unfocused. 🍭" data-zh="你知道某些食物實際上會影響你的感受嗎？英國NHS確認，富含蔬菜、全穀物和蛋白質的均衡飲食有助於支持健康的大腦功能和穩定的情緒。吃太多糖會導致能量驟升然後驟降——讓你感到煩躁、焦慮或注意力不集中。🍭">Did you know that certain foods can actually affect how you feel? The NHS confirms that a balanced diet rich in vegetables, whole grains and protein supports healthy brain function and stable moods. Eating too much sugar causes energy spikes followed by crashes — leaving you feeling irritable, anxious or unfocused. 🍭</p>
+      </div>
+      <div class="cc" style="border-color:var(--orange)">
+        <h3 style="color:var(--orange)">🏃 Exercise and Your Mind</h3>
+        <p data-en="Exercise is one of the most powerful natural mood boosters there is! When you are physically active, your brain releases chemicals called endorphins, which reduce stress and create feelings of happiness. Research from the WHO shows that regular physical activity is linked to lower anxiety and better emotional wellbeing in children. Even a short walk makes a big difference! 😊" data-zh="運動是最強大的天然情緒提升劑之一！當你進行體育活動時，你的大腦會釋放稱為內啡肽的化學物質，這些物質會減輕壓力並產生幸福感。世界衛生組織的研究表明，定期體育活動與兒童焦慮減少和情緒健康改善有關。即使是短暫的散步也會帶來很大的不同！😊">Exercise is one of the most powerful natural mood boosters there is! When you are physically active, your brain releases chemicals called endorphins, which reduce stress and create feelings of happiness. Research from the WHO shows that regular physical activity is linked to lower anxiety and better emotional wellbeing in children. Even a short walk makes a big difference! 😊</p>
+      </div>
+      <div class="cc" style="border-color:var(--purple)">
+        <h3 style="color:var(--purple)">😴 Sleep and Your Emotions</h3>
+        <p data-en="When you do not get enough sleep, it becomes much harder to manage your emotions and focus in class. The NHS highlights that poor sleep in children is linked to increased anxiety, low mood and difficulty with friendships and learning. A good night's sleep helps your brain process the events of the day — including any worries — so you wake up feeling balanced and refreshed. 🌙" data-zh="當你睡眠不足時，管理情緒和在課堂上集中注意力就會變得更加困難。英國NHS強調，兒童睡眠不足與焦慮增加、情緒低落以及友誼和學習困難有關。良好的夜間睡眠有助於你的大腦處理當天的事件——包括任何擔憂——讓你在感到平衡和精神煥發中醒來。🌙">When you do not get enough sleep, it becomes much harder to manage your emotions and focus in class. The NHS highlights that poor sleep in children is linked to increased anxiety, low mood and difficulty with friendships and learning. A good night's sleep helps your brain process the events of the day — including any worries — so you wake up feeling balanced and refreshed. 🌙</p>
+      </div>
+      <div class="cc" style="border-color:var(--blue)">
+        <h3 style="color:var(--blue)">⚖️ The ISF Value of Balance</h3>
+        <p data-en="At ISF, Balance is one of our most treasured values. True balance means caring for your whole self — your body, your mind and your emotions. When you eat well, move regularly and sleep enough, you are living in balance. This helps you bring your very best self to school, to your friendships and to everything you do. Balance is not about perfection — it is about small, positive choices every day. 🌿" data-zh="在弘立，平衡是我們最珍視的價值觀之一。真正的平衡意味著關心你的整個自我——你的身體、你的思想和你的情感。當你吃得好、定期運動和充足睡眠時，你就是在平衡地生活。這有助於你將最好的自己帶到學校、帶到你的友誼中，帶到你所做的一切事情中。平衡不是關於完美——而是關於每天做出小小的、積極的選擇。🌿">At ISF, Balance is one of our most treasured values. True balance means caring for your whole self — your body, your mind and your emotions. When you eat well, move regularly and sleep enough, you are living in balance. This helps you bring your very best self to school, to your friendships and to everything you do. Balance is not about perfection — it is about small, positive choices every day. 🌿</p>
+      </div>
+    </div>
+
+    <div class="st" style="margin-top:44px">
+      <h2 data-en="Did You Know? 🤔" data-zh="你知道嗎？🤔">Did You Know? 🤔</h2>
+      <p data-en="Tap the cards to explore how everything connects!" data-zh="點擊卡片來探索一切如何連接！">Tap the cards to explore how everything connects!</p>
+    </div>
+    <div class="flip-grid" id="grid-connect" style="padding-top:0"></div>
+
+    <div style="text-align:center;margin:36px 0 8px">
+      <button class="btn-cta" onclick="gotoPage('quiz')" data-en="🧠 Take the Wellness Quiz!" data-zh="🧠 參加健康測驗！">🧠 Take the Wellness Quiz!</button>
+    </div>
+  </div>
+
+  <div class="sources"><p data-en="Sources: NHS UK · WHO · Hong Kong Department of Health · CDC" data-zh="資料來源：英國NHS · 世界衛生組織 · 香港衛生署 · 美國CDC">Sources: NHS UK · WHO · Hong Kong Department of Health · CDC</p></div>
+</div>
+
+<!-- ==========================================
+     FOOTER
+========================================== -->
+<footer>
+  <strong data-en="ISF Wellness Hub" data-zh="弘立健康中心">ISF Wellness Hub</strong> &nbsp;·&nbsp;
+  <span data-en="Created for Grade 4 students at The ISF Academy, Hong Kong" data-zh="為香港弘立書院四年級學生而設">Created for Grade 4 students at The ISF Academy, Hong Kong</span><br>
+  <small style="opacity:.7" data-en="Content based on NHS UK, WHO, Hong Kong Department of Health and CDC guidelines." data-zh="內容基於英國NHS、世界衛生組織、香港衛生署及美國CDC的指引。">Content based on NHS UK, WHO, Hong Kong Department of Health and CDC guidelines.</small>
+</footer>
+
+<!-- ==========================================
+     JAVASCRIPT
+========================================== -->
+<script>
+'use strict';
+
+/* =============================================
+   LANGUAGE
+============================================= */
+let lang = 'en';
+
+function toggleLang() {
+  lang = lang === 'en' ? 'zh' : 'en';
+  document.getElementById('langBtn').textContent = lang === 'en' ? '中文' : 'English';
+  applyLang();
+}
+
+function applyLang() {
+  document.querySelectorAll('[data-en]').forEach(el => {
+    const t = el.dataset[lang] || el.dataset.en;
+    el.innerHTML = t;
+  });
+  if (quizState === 'q' && curQ >= 0) renderQ(curQ);
+  if (quizState === 'r') buildResults();
+  Object.keys(builtCards).forEach(k => { if (builtCards[k]) buildFlipCards(k); });
+}
+
+/* =============================================
+   NAVIGATION
+============================================= */
+function gotoPage(id) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById('pg-' + id).classList.add('active');
+  document.querySelectorAll('.nb[data-page]').forEach(b => {
+    b.classList.toggle('active', b.dataset.page === id);
+  });
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  if (!builtCards[id]) buildFlipCards(id);
+}
+
+/* =============================================
+   FLIP CARD DATA
+============================================= */
+const CARDS = {
+  nutrition: [
+    { emoji:'🍎', fe:'5-a-Day Rule', fz:'每日5份法則',
+      be:'The NHS recommends at least 5 portions of fruit and vegetables every day! A portion is roughly a handful. Frozen, tinned and dried varieties all count — so it is easier than you might think. 🥦🍊',
+      bz:'英國NHS建議每天至少吃5份水果和蔬菜！一份大約是一把。冷凍、罐裝和乾燥種類都算——所以比你想象的更容易做到。🥦🍊', src:'NHS UK' },
+    { emoji:'💧', fe:'Stay Hydrated!', fz:'保持水分！',
+      be:'Children aged 9 to 13 should drink 6 to 8 glasses of water each day. Water helps your brain concentrate, regulates your body temperature and keeps your kidneys healthy. Fizzy drinks and juice are not the same thing! 💧',
+      bz:'9至13歲的兒童每天應喝6至8杯水。水有助於大腦集中注意力、調節體溫並保持腎臟健康。汽水和果汁並不一樣！💧', src:'NHS UK' },
+    { emoji:'🍱', fe:'The Eat Well Plate', fz:'健康飲食餐盤',
+      be:'A balanced meal should include: plenty of vegetables, some whole grains (like brown rice or wholemeal bread), a source of protein, and a small amount of healthy fats. Try to make half your plate fruit and vegetables! 🍱',
+      bz:'均衡的餐食應包括：大量蔬菜、一些全穀物（如糙米或全麥麵包）、蛋白質來源和少量健康脂肪。嘗試讓你盤子的一半是水果和蔬菜！🍱', src:'NHS UK Eat Well Guide' },
+    { emoji:'🍫', fe:'Sugar Watch!', fz:'注意糖分！',
+      be:'Children aged 7 to 10 should have no more than 24g of free sugars per day — about 6 teaspoons! A single can of cola contains around 35g of sugar. Too much sugar can harm your teeth and cause energy crashes. 😬',
+      bz:'7至10歲的兒童每天不應攝入超過24克的游離糖——大約6茶匙！一罐可樂含有約35克糖。太多糖會傷害你的牙齒並導致能量驟降。😬', src:'NHS UK' },
+    { emoji:'💪', fe:'The Power of Protein', fz:'蛋白質的力量',
+      be:'Protein builds and repairs muscles, supports your immune system and keeps you feeling full for longer. Great sources include eggs, chicken, fish, tofu, beans and lentils. Try to include some protein at every single meal! 💪',
+      bz:'蛋白質構建和修復肌肉，支持免疫系統，讓你更長時間感到飽足。很好的來源包括雞蛋、雞肉、魚類、豆腐、豆類和扁豆。嘗試在每頓飯中都包括一些蛋白質！💪', src:'NHS UK Eat Well Guide' },
+    { emoji:'🌾', fe:'Choose Whole Grains!', fz:'選擇全穀物！',
+      be:'Whole grain foods — like brown rice, oats and wholemeal bread — release energy slowly, keeping you full and focused for longer. They are also rich in fibre, which keeps your digestive system healthy and happy! 🌾',
+      bz:'全穀物食品——如糙米、燕麥和全麥麵包——緩慢釋放能量，讓你保持飽足和專注更長時間。它們還富含纖維，保持你的消化系統健康快樂！🌾', src:'NHS UK and WHO' }
+  ],
+  exercise: [
+    { emoji:'⏱️', fe:'60 Minutes a Day!', fz:'每天60分鐘！',
+      be:'The WHO recommends children aged 5 to 17 get at least 60 minutes of moderate to vigorous physical activity every day! This could be sport, active play, walking, dancing, swimming — any movement counts! ⏱️',
+      bz:'世界衛生組織建議5至17歲的兒童每天進行至少60分鐘的中等至劇烈體育活動！這可以是運動、積極玩耍、步行、跳舞、游泳——任何運動都算！⏱️', src:'WHO' },
+    { emoji:'🧠', fe:'Exercise and Your Brain', fz:'運動和你的大腦',
+      be:'Exercise increases blood flow to the brain, improving memory, concentration and learning! Research shows that physically active children tend to perform better at school. Even a short walk before studying can help you focus. 🧠',
+      bz:'運動增加大腦的血流量，改善記憶力、注意力和學習能力！研究表明，體育活躍的兒童往往在學校表現更好。即使在學習前短暫散步也能幫助你集中注意力。🧠', src:'WHO and NHS UK' },
+    { emoji:'💪', fe:'Build Strong Bones!', fz:'建立強壯的骨骼！',
+      be:'Weight-bearing exercises like running, jumping and dancing help build strong bones. Your bones are still developing right now, making exercise especially important during childhood. Strong bones last a lifetime! 💪',
+      bz:'負重運動如跑步、跳躍和跳舞有助於建立強壯的骨骼。你的骨骼現在仍在發育，使運動在童年時期尤其重要。強壯的骨骼伴隨終生！💪', src:'NHS UK' },
+    { emoji:'😊', fe:'The Mood Boost!', fz:'情緒提升！',
+      be:"Exercise releases endorphins — natural chemicals in your brain that create feelings of happiness and reduce stress. Even just 10 minutes of activity can lift your mood. This is sometimes called the 'runner's high'! 😊",
+      bz:'運動會釋放內啡肽——你大腦中產生幸福感和減輕壓力的天然化學物質。即使只有10分鐘的活動也能提升你的情緒。這有時被稱為「跑者的愉悅感」！😊', src:'NHS UK and WHO' },
+    { emoji:'🪑', fe:'Sit Less, Move More!', fz:'少坐多動！',
+      be:'Sitting for long periods is harmful to health, even if you exercise at other times! The NHS recommends taking a short movement break every 30 minutes. Try some jumping jacks, stretching or a quick walk around the room! 🚶',
+      bz:'長時間坐著對健康有害，即使你在其他時間鍛煉！英國NHS建議每30分鐘進行短暫的運動休息。嘗試一些開合跳、伸展或在房間裡快速走動！🚶', src:'NHS UK' },
+    { emoji:'🏊', fe:'Mix It Up!', fz:'多樣化你的運動！',
+      be:'Try to include three types of activity: aerobic (like swimming or cycling), muscle-strengthening (like climbing or push-ups) and bone-strengthening (like jumping or running). Variety keeps exercise fun and works your whole body! 🏊🚴🤸',
+      bz:'嘗試包括三種類型的活動：有氧運動（如游泳或騎自行車）、肌肉強化（如攀爬或俯臥撐）和骨骼強化（如跳躍或跑步）。多樣化使運動有趣，並鍛煉你整個身體！🏊🚴🤸', src:'WHO and NHS UK' }
+  ],
+  sleep: [
+    { emoji:'⏰', fe:'9 to 11 Hours a Night!', fz:'每晚9至11小時！',
+      be:'The NHS recommends children aged 6 to 13 get between 9 and 11 hours of sleep every night. Consistent sleep schedules — even at weekends — help your body clock work at its very best! ⏰',
+      bz:'英國NHS建議6至13歲的兒童每晚睡9至11小時。一致的睡眠時間表——即使是在週末——有助於你的生理時鐘以最佳狀態運作！⏰', src:'NHS UK' },
+    { emoji:'🧠', fe:'Sleep and Memory', fz:'睡眠和記憶',
+      be:'While you sleep, your brain consolidates memories — sorting through everything you have learned and storing the important information! This is why sleeping well before a test is far better than staying up late to revise. 🧠',
+      bz:'當你睡覺時，你的大腦會鞏固記憶——整理你學到的一切並存儲重要信息！這就是為什麼考試前睡個好覺遠比熬夜復習要好。🧠', src:'NHS UK and WHO' },
+    { emoji:'📵', fe:'Screens and Sleep', fz:'屏幕和睡眠',
+      be:"Screens emit 'blue light' which suppresses melatonin — your natural sleep hormone! The NHS recommends no screens for at least 1 hour before bed. Charge your devices outside the bedroom for a better night's sleep. 📵",
+      bz:'屏幕會發出「藍光」，這會抑制褪黑素——你天然的睡眠激素！英國NHS建議睡前至少1小時不使用屏幕。在臥室外為設備充電，以獲得更好的夜間睡眠。📵', src:'NHS UK' },
+    { emoji:'🌡️', fe:'The Perfect Environment', fz:'完美的睡眠環境',
+      be:'For the best sleep, your bedroom should be cool (around 16 to 18°C), dark and quiet. A dark room helps your brain produce melatonin — the hormone that makes you feel sleepy. Try blackout curtains if your room is bright! 🌙',
+      bz:'為了最佳睡眠，你的臥室應該涼爽（約16至18°C）、黑暗和安靜。黑暗的房間有助於你的大腦產生褪黑素——讓你感到困倦的激素。如果你的房間很亮，嘗試使用遮光窗簾！🌙', src:'NHS UK' },
+    { emoji:'😤', fe:'Sleep and Emotions', fz:'睡眠和情緒',
+      be:'Without enough sleep, the emotional part of your brain becomes much more reactive — meaning you may feel more irritable, anxious or sad when you are tired. Getting good sleep is one of the most powerful things you can do for your mental wellbeing! 😴',
+      bz:'沒有足夠的睡眠，你大腦的情緒部分會變得更加敏感——意味著當你疲倦時，你可能會感到更煩躁、焦慮或悲傷。獲得良好的睡眠是你能為心理健康做的最有力的事情之一！😴', src:'NHS UK and WHO' },
+    { emoji:'🛁', fe:'Bedtime Routine Power!', fz:'就寢程序的力量！',
+      be:'A consistent bedtime routine signals your brain to start producing melatonin. Try: a warm bath, some reading or gentle drawing, and lights out at the same time each night. Your brain loves routine and predictability! 🛁',
+      bz:'一致的就寢程序向你的大腦發出開始產生褪黑素的信號。嘗試：溫水澡、一些閱讀或輕柔的繪畫，每晚在同一時間熄燈。你的大腦喜歡規律和可預測性！🛁', src:'NHS UK' }
+  ],
+  connect: [
+    { emoji:'🔄', fe:'The Wellness Cycle', fz:'健康循環',
+      be:'Good sleep gives you energy to exercise. Exercise helps you sleep better at night. Nutritious food gives you energy to move and focus! These three pillars support each other in a beautiful, powerful cycle. 🔄',
+      bz:'良好的睡眠給你運動的能量。運動幫助你在晚上睡得更好。營養食物給你能量去活動和集中注意力！這三大支柱以一種美麗而有力的循環相互支持。🔄', src:'WHO and NHS UK' },
+    { emoji:'😊', fe:'Food and Your Mood', fz:'食物和你的情緒',
+      be:"Around 95% of serotonin — one of your brain's key happiness chemicals — is produced in your gut! Eating a diet rich in vegetables, fibre and whole grains supports your gut health and, in turn, your mood and mental wellbeing. 😊",
+      bz:'大約95%的血清素——你大腦的關鍵幸福化學物質之一——在你的腸道中產生！食用富含蔬菜、纖維和全穀物的飲食有助於你的腸道健康，進而有助於你的情緒和心理健康。😊', src:'NHS UK' },
+    { emoji:'⚖️', fe:'Balance — Our ISF Value', fz:'平衡——我們的弘立價值觀',
+      be:"ISF's value of Balance applies perfectly to wellness! True balance means nourishing your body through good food and movement, and caring for your mind through adequate rest and sleep. Small daily choices create a balanced, fulfilling life! ⚖️",
+      bz:'弘立的「平衡」價值觀完美地適用於健康！真正的平衡意味著通過良好的食物和運動滋養你的身體，並通過充足的休息和睡眠照顧你的思想。每天的小選擇創造了平衡、充實的生活！⚖️', src:'ISF Academy Values' },
+    { emoji:'🌱', fe:'Small Changes Win!', fz:'小改變創造大勝利！',
+      be:'You do not need to change everything at once! Research shows that just one or two small positive changes — like drinking more water or going to bed 15 minutes earlier — can have a significant, lasting impact on your health. 🌱',
+      bz:'你不需要一次改變一切！研究表明，僅僅一兩個小的積極改變——比如多喝水或提前15分鐘上床——可以對你的健康產生顯著、持久的影響。🌱', src:'WHO and NHS UK' }
+  ]
+};
+
+const builtCards = { nutrition:false, exercise:false, sleep:false, connect:false };
+
+function buildFlipCards(page) {
+  const grid = document.getElementById('grid-' + page);
+  if (!grid || !CARDS[page]) return;
+  const ff = { nutrition:'ff-n', exercise:'ff-e', sleep:'ff-s', connect:'ff-c' };
+  const fb = { nutrition:'fb-n', exercise:'fb-e', sleep:'fb-s', connect:'fb-c' };
+  grid.innerHTML = '';
+  CARDS[page].forEach(c => {
+    const d = document.createElement('div');
+    d.className = 'fc';
+    d.innerHTML = `
+      <div class="fc-in">
+        <div class="fc-front ${ff[page]}">
+          <div class="fce">${c.emoji}</div>
+          <h4>${lang === 'en' ? c.fe : c.fz}</h4>
+          <p class="fch">${lang === 'en' ? '👆 Tap to discover!' : '👆 點擊發現！'}</p>
+        </div>
+        <div class="fc-back ${fb[page]}">
+          <p>${lang === 'en' ? c.be : c.bz}</p>
+          <p class="fcs">📚 ${c.src}</p>
+        </div>
+      </div>`;
+    d.addEventListener('click', () => d.classList.toggle('flip'));
+    grid.appendChild(d);
+  });
+  builtCards[page] = true;
+}
+
+/* =============================================
+   QUIZ DATA — 20 QUESTIONS
+============================================= */
+const QUESTIONS = [
+  /* ---- NUTRITION Q1–Q7 ---- */
+  { cat:'nutrition', type:'mc',
+    en:{ q:'How many portions of fruit and vegetables do you aim to eat each day? 🍎🥦',
+         opts:['1 to 2 portions','3 to 4 portions','5 or more portions 🌟','I do not usually count'],
+         fact:'⭐ The NHS recommends eating at least 5 portions of fruit and vegetables every day! A portion is roughly a handful — and frozen or tinned vegetables count too.' },
+    zh:{ q:'你每天嘗試吃多少份水果和蔬菜？🍎🥦',
+         opts:['1至2份','3至4份','5份或以上 🌟','我通常不計算'],
+         fact:'⭐ 英國NHS建議每天至少吃5份水果和蔬菜！一份大約是一把——冷凍或罐裝蔬菜也算數。' },
+    scores:[0,1,2,0], tipFor:[0,1,3],
+    tips:{ en:'🥦 <strong>Try to reach 5 portions a day!</strong> Add a piece of fruit to breakfast or snack on carrot sticks instead of crisps. Small swaps make a big difference! (NHS UK)',
+           zh:'🥦 <strong>嘗試每天達到5份！</strong> 在早餐中加入一份水果，或以胡蘿蔔條代替薯片作為零食。小小的改變能帶來大不同！（英國NHS）' }
+  },
+  { cat:'nutrition', type:'freq',
+    en:{ q:'How often do you drink water as your main drink during the day? 💧',
+         opts:['Never 😬','Sometimes 🙂','Most days 😊','Always! 🌊'],
+         fact:'💧 Your body is about 60% water! The NHS recommends children drink 6 to 8 glasses of water every day. Staying hydrated helps your brain concentrate and keeps your energy levels stable.' },
+    zh:{ q:'你多常在白天主要喝水？💧',
+         opts:['從不 😬','有時 🙂','大多數日子 😊','總是！🌊'],
+         fact:'💧 你的身體約由60%的水組成！英國NHS建議兒童每天喝6至8杯水。保持水分有助於大腦集中注意力，保持能量水平穩定。' },
+    scores:[0,1,2,2], tipFor:[0,1],
+    tips:{ en:'💧 <strong>Drink more water!</strong> Try keeping a water bottle at your desk. Swap fizzy drinks and juice for water — your brain and body will feel the difference almost immediately! (NHS UK)',
+           zh:'💧 <strong>多喝水！</strong> 嘗試在桌上放一個水瓶。用水代替汽水和果汁——你的大腦和身體幾乎立即就能感受到差異！（英國NHS）' }
+  },
+  { cat:'nutrition', type:'freq',
+    en:{ q:"How often do you eat fast food (such as McDonald's, KFC or similar)? 🍔",
+         opts:['Rarely or never 🌟','Once a week or less 👍','A few times a week 😬','Every day 😰'],
+         fact:'🍟 Fast food can be enjoyed as an occasional treat! However, eating it regularly means consuming a lot of hidden salt, saturated fat and sugar. Balance is everything. (NHS UK)' },
+    zh:{ q:'你多常吃快餐（如麥當勞、肯德基或類似的）？🍔',
+         opts:['很少或從不 🌟','每週一次或更少 👍','每週幾次 😬','每天 😰'],
+         fact:'🍟 快餐可以作為偶爾的享受！然而，經常吃意味著攝入大量隱藏的鹽、飽和脂肪和糖。平衡是一切。（英國NHS）' },
+    scores:[2,1,0,0], tipFor:[2,3],
+    tips:{ en:'🍔 <strong>Try to reduce fast food!</strong> Fast food is often high in salt, sugar and saturated fat. It is fine as an occasional treat, but aim for home-cooked meals most of the time. (NHS UK)',
+           zh:'🍔 <strong>嘗試減少快餐！</strong> 快餐通常含有高鹽、高糖和飽和脂肪。偶爾作為享受是可以的，但大多數時候要以家常飯為主。（英國NHS）' }
+  },
+  { cat:'nutrition', type:'tf',
+    en:{ q:'True or False: Drinking fizzy drinks (like sodas and cola) every day is fine as part of a healthy diet. 🥤',
+         fact:'🥤 A single can of cola can contain up to 9 teaspoons of sugar — far more than the recommended daily amount for your age! The NHS recommends water, milk or diluted fruit juice as the best drink choices for children.' },
+    zh:{ q:'對或錯：每天喝汽水（如蘇打水和可樂）作為健康飲食的一部分是可以的。🥤',
+         fact:'🥤 一罐可樂可能含有多達9茶匙的糖——遠遠超過你這個年齡的每日推薦量！英國NHS建議水、牛奶或稀釋果汁是兒童最佳飲料選擇。' },
+    scores:{ true:0, false:2 }, correct:'false', tipFor:'true',
+    tips:{ en:'🥤 <strong>Watch out for sugary drinks!</strong> Fizzy drinks are packed with added sugar. Choose water, milk or diluted fruit juice instead. Too much sugar can harm your teeth and cause energy crashes throughout the day. (NHS UK)',
+           zh:'🥤 <strong>注意含糖飲料！</strong> 汽水含有大量添加糖。選擇水、牛奶或稀釋果汁代替。太多糖會傷害你的牙齒並導致一天中能量驟降。（英國NHS）' }
+  },
+  { cat:'nutrition', type:'mc',
+    en:{ q:'Which of the following is the best source of protein for your body? 💪',
+         opts:['Chocolate biscuits 🍪','Crisps 🥔','Chicken, tofu, eggs or lentils 🍗 🌟','White bread 🍞'],
+         fact:'💪 Protein builds and repairs your muscles and supports your immune system! Great sources include meat, fish, eggs, tofu, beans and lentils. Try to include some protein at every meal. (NHS UK Eat Well Guide)' },
+    zh:{ q:'以下哪個是你身體最好的蛋白質來源？💪',
+         opts:['巧克力餅乾 🍪','薯片 🥔','雞肉、豆腐、雞蛋或扁豆 🍗 🌟','白麵包 🍞'],
+         fact:'💪 蛋白質構建和修復你的肌肉並支持你的免疫系統！很好的來源包括肉類、魚類、雞蛋、豆腐、豆類和扁豆。嘗試在每頓飯中都包括一些蛋白質。（英國NHS飲食指南）' },
+    scores:[0,0,2,0], tipFor:[0,1,3],
+    tips:{ en:'💪 <strong>Include more protein in your meals!</strong> Protein helps your muscles, brain and immune system. Great choices include chicken, fish, tofu, eggs, beans and lentils. Try to add some to every meal! (NHS UK)',
+           zh:'💪 <strong>在你的飲食中加入更多蛋白質！</strong> 蛋白質有助於你的肌肉、大腦和免疫系統。很好的選擇包括雞肉、魚類、豆腐、雞蛋、豆類和扁豆。嘗試在每頓飯中加入一些！（英國NHS）' }
+  },
+  { cat:'nutrition', type:'freq',
+    en:{ q:'How often do you eat processed or packaged snacks (such as crisps, instant noodles or sweet biscuits)? 📦',
+         opts:['Never 🌟','Sometimes (once or twice a week) 😊','Most days 😬','Every day 😰'],
+         fact:'📦 Processed foods often contain hidden salt, sugar and unhealthy fats. Fresh snacks — like fruit, plain nuts, yoghurt or raw vegetables — are much better for your body and your brain! The WHO recommends limiting ultra-processed foods.' },
+    zh:{ q:'你多常吃加工或包裝零食（如薯片、即食麵或甜餅乾）？📦',
+         opts:['從不 🌟','有時（每週一兩次）😊','大多數日子 😬','每天 😰'],
+         fact:'📦 加工食品通常含有隱藏的鹽、糖和不健康的脂肪。新鮮零食——如水果、原味堅果、酸奶或生蔬菜——對你的身體和大腦好得多！世界衛生組織建議限制超加工食品。' },
+    scores:[2,1,0,0], tipFor:[2,3],
+    tips:{ en:'📦 <strong>Swap to healthier snacks!</strong> Try fresh fruit, plain nuts, yoghurt or vegetable sticks instead of processed snacks. Processed foods are high in salt and sugar, which affect your energy and concentration. (WHO)',
+           zh:'📦 <strong>換成更健康的零食！</strong> 嘗試新鮮水果、原味堅果、酸奶或蔬菜條，而不是加工零食。加工食品富含鹽和糖，這可能會影響你的能量和注意力。（世界衛生組織）' }
+  },
+  { cat:'nutrition', type:'tf',
+    en:{ q:'True or False: Eating a nutritious breakfast helps you concentrate better at school. 🍳',
+         fact:'🍳 TRUE! Research shows that children who eat a nutritious breakfast tend to concentrate better, have more energy and perform better at school throughout the day. Try porridge, eggs, wholegrain toast or fruit with yoghurt. (NHS UK)' },
+    zh:{ q:'對或錯：吃營養豐富的早餐有助於你在學校更好地集中注意力。🍳',
+         fact:'🍳 真的！研究表明，吃營養豐富早餐的兒童往往注意力更集中，精力更充沛，全天在學校表現更好。嘗試燕麥粥、雞蛋、全麥吐司或水果配酸奶。（英國NHS）' },
+    scores:{ true:2, false:0 }, correct:'true', tipFor:'false',
+    tips:{ en:'🍳 <strong>Do not skip breakfast!</strong> A nutritious breakfast fuels your brain for the school day. Try porridge, wholegrain toast, eggs or fruit with yoghurt. Even something small is better than nothing! (NHS UK)',
+           zh:'🍳 <strong>不要不吃早餐！</strong> 營養豐富的早餐為你的大腦提供上學日所需的燃料。嘗試燕麥粥、全麥吐司、雞蛋或水果配酸奶。即使是一點點也比什麼都不吃好！（英國NHS）' }
+  },
+
+  /* ---- EXERCISE Q8–Q14 ---- */
+  { cat:'exercise', type:'mc',
+    en:{ q:'How many minutes of physical activity should children your age aim for each day? 🏃',
+         opts:['15 minutes','30 minutes','60 minutes 🌟','90 minutes'],
+         fact:'🏃 The World Health Organisation recommends children aged 5 to 17 get at least 60 minutes of moderate to vigorous physical activity every day! Any movement counts — sport, dancing, cycling or active play.' },
+    zh:{ q:'你這個年齡的兒童每天應該目標多少分鐘的體育活動？🏃',
+         opts:['15分鐘','30分鐘','60分鐘 🌟','90分鐘'],
+         fact:'🏃 世界衛生組織建議5至17歲的兒童每天進行至少60分鐘的中等至劇烈體育活動！任何運動都算——運動、跳舞、騎自行車或積極玩耍。' },
+    scores:[0,1,2,1], tipFor:[0,1],
+    tips:{ en:'🏃 <strong>Aim for 60 minutes of activity a day!</strong> The WHO recommends at least 60 minutes of moderate to vigorous physical activity daily for your age group. Try breaking it into smaller chunks throughout the day! (WHO)',
+           zh:'🏃 <strong>目標每天60分鐘的活動！</strong> 世界衛生組織建議你這個年齡段每天進行至少60分鐘的中等至劇烈體育活動。嘗試將其分成一天中的幾個小塊！（世界衛生組織）' }
+  },
+  { cat:'exercise', type:'mc',
+    en:{ q:'On most school days, how physically active would you honestly say you are? 🎽',
+         opts:['I mostly sit or lie down 😴','I move around a little 🚶','I am active for about 30 minutes 🙂','I am active for 60 minutes or more 🌟'],
+         fact:'🎽 Any movement is better than none! Even light activity like walking helps your circulation, mood and concentration. The goal is to build towards 60 minutes of moderate activity each day. Start where you are and build up from there! (WHO and NHS UK)' },
+    zh:{ q:'在大多數上學日，你誠實地說你的體育活動量如何？🎽',
+         opts:['我主要是坐著或躺著 😴','我稍微走動一下 🚶','我活動大約30分鐘 🙂','我活動60分鐘或以上 🌟'],
+         fact:'🎽 任何運動都比不動好！即使是輕度活動，如散步，也有助於你的循環、情緒和注意力。目標是每天逐步建立到60分鐘的中等活動。從你所在的地方開始，逐步建立！（世界衛生組織和英國NHS）' },
+    scores:[0,0,1,2], tipFor:[0,1,2],
+    tips:{ en:'🎽 <strong>Try to move more every day!</strong> Start small — take the stairs, walk during break time, or join an after-school sports club. Every bit of movement adds up towards your daily goal! (WHO and NHS UK)',
+           zh:'🎽 <strong>嘗試每天多活動！</strong> 從小事做起——走樓梯、在課間休息時散步，或加入課後運動俱樂部。每一點運動都能累積！（世界衛生組織和英國NHS）' }
+  },
+  { cat:'exercise', type:'tf',
+    en:{ q:'True or False: Sitting for long periods (such as during screen time) can be harmful, even if you also exercise at other times of the day. 🪑',
+         fact:'🪑 TRUE! Research shows that prolonged sitting is harmful even for active people. The NHS recommends breaking up long sitting periods with short movement breaks every 30 minutes. Try standing up, stretching or doing a few star jumps!' },
+    zh:{ q:'對或錯：長時間坐著（例如在使用屏幕時）可能有害，即使你在一天的其他時間也鍛煉。🪑',
+         fact:'🪑 真的！研究表明，長時間坐著對活躍的人也有害。英國NHS建議每30分鐘通過短暫的運動休息來打破長時間坐著。嘗試站起來、伸展或做幾個開合跳！' },
+    scores:{ true:2, false:0 }, correct:'true', tipFor:'false',
+    tips:{ en:'🪑 <strong>Break up your sitting time!</strong> Even if you exercise daily, sitting for long stretches is bad for you. Try to stand up, stretch or move every 30 minutes. Your body will feel much better for it! (NHS UK)',
+           zh:'🪑 <strong>打斷你的久坐時間！</strong> 即使你每天鍛煉，長時間坐著對你有害。嘗試每30分鐘站起來、伸展或活動。你的身體會因此感覺好得多！（英國NHS）' }
+  },
+  { cat:'exercise', type:'mc',
+    en:{ q:'How do you usually travel to and from school? 🚶',
+         opts:['I walk or cycle 🚲 🌟','I take the bus or MTR 🚇','I travel by car 🚗','Another way (e.g. school bus) 🚌'],
+         fact:'🚶 Active travel — like walking or cycling to school — is a brilliant way to build extra movement into your day! Even walking part of your journey counts. In Hong Kong, many students take the MTR — try adding a short walk at either end! 🇭🇰' },
+    zh:{ q:'你通常如何上下學？🚶',
+         opts:['我步行或騎自行車 🚲 🌟','我乘坐巴士或港鐵 🚇','我乘坐汽車 🚗','另一種方式（例如校巴）🚌'],
+         fact:'🚶 積極的交通方式——如步行或騎自行車上學——是在你的一天中增加額外運動的絕佳方式！即使步行部分行程也算數。在香港，許多學生乘坐港鐵——嘗試在兩端增加短暫的步行！🇭🇰' },
+    scores:[2,1,0,1], tipFor:[2],
+    tips:{ en:'🚗 <strong>Try to add active travel where you can!</strong> If you travel by car or school bus, try to walk part of the way or take the stairs instead of the lift when you arrive at school. Every step counts! (NHS UK)',
+           zh:'🚗 <strong>嘗試在可以的地方增加積極的交通方式！</strong> 如果你乘坐汽車或校巴，嘗試步行部分路程，或在到達學校時走樓梯而不是乘電梯。每一步都算數！（英國NHS）' }
+  },
+  { cat:'exercise', type:'freq',
+    en:{ q:'How often do you take part in sports, active games or exercise outside of school? ⚽',
+         opts:['Never 😬','Sometimes 🙂','Most days 😊','Every day! 🌟'],
+         fact:'⚽ Playing sport is great for your body AND your friendships! Team sports help you build fitness and social skills at the same time. Hong Kong has brilliant facilities for swimming, football, tennis and martial arts! 🇭🇰' },
+    zh:{ q:'你多常在學校以外參加運動、積極遊戲或鍛煉？⚽',
+         opts:['從不 😬','有時 🙂','大多數日子 😊','每天！🌟'],
+         fact:'⚽ 參與運動對你的身體和友誼都很棒！團隊運動幫助你同時建立體能和社交技能。香港有出色的游泳、足球、網球和武術設施！🇭🇰' },
+    scores:[0,1,2,2], tipFor:[0,1],
+    tips:{ en:'⚽ <strong>Get active outside school!</strong> Find a sport or activity you enjoy — swimming, martial arts, dancing, cycling or a family walk. Being active outside school hours is just as important as PE class! (WHO)',
+           zh:'⚽ <strong>在學校以外保持活躍！</strong> 找一個你喜歡的運動或活動——游泳、武術、跳舞、騎自行車或家庭散步。在學校以外保持活躍與體育課同樣重要！（世界衛生組織）' }
+  },
+  { cat:'exercise', type:'tf',
+    en:{ q:'True or False: Exercise can help improve your mood and reduce feelings of stress and worry. 😊',
+         fact:"😊 Absolutely TRUE! When you exercise, your brain releases chemicals called endorphins — your body's own natural mood boosters. Even just a 10-minute walk can reduce feelings of stress. This is supported by both the NHS and WHO!" },
+    zh:{ q:'對或錯：運動可以幫助改善你的情緒並減少壓力和擔憂的感覺。😊',
+         fact:'😊 絕對是真的！當你運動時，你的大腦會釋放稱為內啡肽的化學物質——你身體自己的天然情緒提升劑。即使只是10分鐘的散步也可以減少壓力感。這得到英國NHS和世界衛生組織的支持！' },
+    scores:{ true:2, false:0 }, correct:'true', tipFor:'false',
+    tips:{ en:'😊 <strong>Remember — exercise is a mood booster!</strong> When you feel stressed or low, try some physical activity. Even a short walk or a bit of dancing releases natural mood-boosting chemicals in your brain! (NHS UK and WHO)',
+           zh:'😊 <strong>記住——運動能提升情緒！</strong> 當你感到壓力或情緒低落時，嘗試一些體育活動。即使是短暫的散步或一點跳舞也會在你的大腦中釋放天然的情緒提升化學物質！（英國NHS和世界衛生組織）' }
+  },
+  { cat:'exercise', type:'mc',
+    en:{ q:'Which of the following best describes "moderate-intensity exercise"? 🫀',
+         opts:['Sitting and reading 📚','Watching television 📺','Brisk walking, swimming or cycling 🏊 🌟','Standing still 🧍'],
+         fact:'🫀 Moderate-intensity exercise means your heart beats faster and you breathe more quickly, but you can still hold a short conversation. Examples include brisk walking, swimming, cycling and dancing. (NHS UK)' },
+    zh:{ q:'以下哪個最能描述「中等強度運動」？🫀',
+         opts:['坐著閱讀 📚','看電視 📺','快步走、游泳或騎自行車 🏊 🌟','站立不動 🧍'],
+         fact:'🫀 中等強度運動意味著你的心跳加快，呼吸更急促，但你仍然可以進行簡短的對話。例子包括快步走、游泳、騎自行車和跳舞。（英國NHS）' },
+    scores:[0,0,2,0], tipFor:[0,1,3],
+    tips:{ en:'🫀 <strong>Learn what counts as exercise!</strong> Moderate exercise means your heart beats faster and you breathe more quickly. Great examples are brisk walking, swimming, cycling and dancing. Try to include some vigorous activity too — like running or sport! (NHS UK)',
+           zh:'🫀 <strong>了解什麼算作運動！</strong> 中等運動意味著你的心跳加快，呼吸更急促。很好的例子包括快步走、游泳、騎自行車和跳舞。也嘗試包括一些劇烈活動——如跑步或運動！（英國NHS）' }
+  },
+
+  /* ---- SLEEP Q15–Q20 ---- */
+  { cat:'sleep', type:'mc',
+    en:{ q:'How many hours of sleep are recommended for children aged 9 to 10 each night? 😴',
+         opts:['6 to 7 hours 😬','7 to 8 hours 😐','9 to 11 hours 🌟','12 or more hours'],
+         fact:'😴 The NHS recommends that children aged 6 to 13 get between 9 and 11 hours of sleep every night! Sleep is when your brain sorts through everything you have learned and your body releases growth hormones. It is truly essential.' },
+    zh:{ q:'建議9至10歲兒童每晚睡多少小時？😴',
+         opts:['6至7小時 😬','7至8小時 😐','9至11小時 🌟','12小時或以上'],
+         fact:'😴 英國NHS建議6至13歲的兒童每晚睡9至11小時！睡眠時，你的大腦會整理你學到的一切，你的身體會釋放生長激素。這真的是必不可少的。' },
+    scores:[0,1,2,1], tipFor:[0,1],
+    tips:{ en:'😴 <strong>Children your age need 9 to 11 hours of sleep!</strong> Make sure you go to bed early enough to get the sleep your brain and body need. Try setting a consistent bedtime — even on weekends! (NHS UK)',
+           zh:'😴 <strong>你這個年齡的兒童需要9至11小時的睡眠！</strong> 確保你早點上床睡覺，讓你的大腦和身體得到所需的睡眠。嘗試設定一個固定的就寢時間——即使是在週末！（英國NHS）' }
+  },
+  { cat:'sleep', type:'mc',
+    en:{ q:'How many hours of sleep do you usually get on a typical school night? 🛏️',
+         opts:['Less than 7 hours 😰','7 to 8 hours 😐','9 to 10 hours 😊 🌟','More than 10 hours 🌙'],
+         fact:'🛏️ Even just 30 extra minutes of sleep per night can make a real difference to how you feel and how well you concentrate! If you are getting less than 9 hours, try moving your bedtime earlier by just 15 minutes this week. (NHS UK)' },
+    zh:{ q:'在典型的上學晚上，你通常睡多少小時？🛏️',
+         opts:['不到7小時 😰','7至8小時 😐','9至10小時 😊 🌟','超過10小時 🌙'],
+         fact:'🛏️ 每晚多睡30分鐘就能對你的感受和注意力產生真正的差異！如果你睡不到9小時，嘗試本週把就寢時間提前15分鐘。（英國NHS）' },
+    scores:[0,1,2,2], tipFor:[0,1],
+    tips:{ en:'🛏️ <strong>Try to get more sleep!</strong> Children aged 9 to 10 need 9 to 11 hours per night. Going to bed just 15 to 30 minutes earlier can significantly improve your concentration, mood and energy at school. (NHS UK)',
+           zh:'🛏️ <strong>嘗試多睡一些！</strong> 9至10歲的兒童每晚需要9至11小時。只需提前15至30分鐘上床可以顯著改善你在學校的注意力、情緒和能量。（英國NHS）' }
+  },
+  { cat:'sleep', type:'tf',
+    en:{ q:'True or False: Using a screen (phone, tablet or TV) in the hour before bed makes it harder to fall asleep. 📵',
+         fact:'📵 TRUE! Screens emit blue light which tells your brain it is still daytime and suppresses melatonin — the hormone that makes you feel sleepy. The NHS recommends switching off all screens at least 1 hour before bedtime. Try reading, drawing or listening to calm music instead!' },
+    zh:{ q:'對或錯：在睡前一小時使用屏幕（手機、平板電腦或電視）會使你更難入睡。📵',
+         fact:'📵 真的！屏幕會發出藍光，這會告訴你的大腦現在仍然是白天，並抑制褪黑素——讓你感到困倦的激素。英國NHS建議睡前至少1小時關閉所有屏幕。嘗試閱讀、繪畫或聆聽平靜的音樂代替！' },
+    scores:{ true:2, false:0 }, correct:'true', tipFor:'false',
+    tips:{ en:'📵 <strong>Switch off screens before bed!</strong> Blue light from phones, tablets and TVs suppresses your sleep hormone. The NHS recommends at least 1 hour of screen-free time before bed. Try reading a book or drawing instead. (NHS UK)',
+           zh:'📵 <strong>睡前關閉屏幕！</strong> 手機、平板電腦和電視的藍光會抑制你的睡眠激素。英國NHS建議睡前至少1小時不使用屏幕。嘗試閱讀書籍或繪畫代替。（英國NHS）' }
+  },
+  { cat:'sleep', type:'mc',
+    en:{ q:"Which of the following describes the best bedtime routine for a good night's sleep? 🛁",
+         opts:['Play video games until you feel sleepy 🎮','Have a warm bath, then read or draw, and go to bed at the same time each night 🛁📚 🌟','Drink a sugary drink just before bed 🥤','Go to sleep at a different time each night 🤷'],
+         fact:'🛁 A consistent bedtime routine signals your brain to start producing melatonin! The NHS recommends a calming routine — such as a warm bath, some reading or light drawing — followed by the same bedtime every single night.' },
+    zh:{ q:'以下哪個描述了良好夜間睡眠的最佳就寢程序？🛁',
+         opts:['玩電子遊戲直到你感到困倦 🎮','洗個溫水澡，然後閱讀或繪畫，每晚在同一時間上床 🛁📚 🌟','在睡前喝含糖飲料 🥤','根據你的感覺每晚在不同時間入睡 🤷'],
+         fact:'🛁 一致的就寢程序向你的大腦發出開始產生褪黑素的信號！英國NHS建議一個平靜的程序——如溫水澡、一些閱讀或輕度繪畫——然後每晚在同一時間上床。' },
+    scores:[0,2,0,0], tipFor:[0,2,3],
+    tips:{ en:'🛁 <strong>Build a relaxing bedtime routine!</strong> A warm bath, some reading or drawing, and a consistent bedtime every night signals your brain to wind down. Avoid screens, sugary snacks and exciting games close to bedtime. (NHS UK)',
+           zh:'🛁 <strong>建立一個放鬆的就寢程序！</strong> 溫水澡、一些閱讀或繪畫，以及每晚一致的就寢時間，這些都向你的大腦發出放鬆的信號。避免在就寢前使用屏幕、吃甜食和玩刺激的遊戲。（英國NHS）' }
+  },
+  { cat:'sleep', type:'freq',
+    en:{ q:'How often do you use a screen (phone, iPad or TV) in the last hour before going to bed? 📱',
+         opts:['Never 🌟','Sometimes 😊','Most nights 😬','Every night 😰'],
+         fact:'📱 In Hong Kong, screen use before bed is very common among young people — and it is one of the main reasons many children do not sleep well! Even just 1 hour of screen-free time before bed can dramatically improve your sleep quality. 🇭🇰 (NHS UK and HK Dept of Health)' },
+    zh:{ q:'你多常在睡前最後一小時使用屏幕（手機、iPad或電視）？📱',
+         opts:['從不 🌟','有時 😊','大多數晚上 😬','每晚 😰'],
+         fact:'📱 在香港，睡前使用屏幕在年輕人中非常普遍——這是許多兒童睡眠不好的主要原因之一！即使睡前只有1小時不使用屏幕，也能顯著改善你的睡眠質量。🇭🇰（英國NHS和香港衛生署）' },
+    scores:[2,1,0,0], tipFor:[2,3],
+    tips:{ en:'📱 <strong>Try screen-free time before bed!</strong> Aim for at least 1 hour without screens before sleeping. Charge your devices outside your bedroom and try reading, journalling or listening to calm music instead. (NHS UK and HK Dept of Health)',
+           zh:'📱 <strong>嘗試在睡前不使用屏幕！</strong> 目標是在睡前至少1小時不使用屏幕。在臥室外為設備充電，嘗試閱讀、寫日記或聆聽平靜的音樂代替。（英國NHS和香港衛生署）' }
+  },
+  { cat:'sleep', type:'tf',
+    en:{ q:"True or False: A good night's sleep helps you feel happier, more focused and better at managing your emotions at school. 🧠",
+         fact:'🧠 TRUE! When you sleep, your brain processes the emotions and experiences of the day — almost like an overnight reset! Children who sleep well tend to feel happier, manage stress better and get on more easily with friends and teachers. (NHS UK and WHO)' },
+    zh:{ q:'對或錯：良好的夜間睡眠有助於你感到更快樂、更專注，並更好地在學校管理情緒。🧠',
+         fact:'🧠 真的！當你睡覺時，你的大腦會處理當天的情緒和經歷——幾乎就像一個隔夜重置！睡眠好的兒童往往感到更快樂，更好地管理壓力，並更容易與朋友和老師相處。（英國NHS和世界衛生組織）' },
+    scores:{ true:2, false:0 }, correct:'true', tipFor:'false',
+    tips:{ en:'🧠 <strong>Sleep is essential for emotional wellbeing!</strong> When you sleep well, your brain processes your emotions and helps you manage your feelings better the next day. Make sleep a priority for both your mental and physical health! (NHS UK and WHO)',
+           zh:'🧠 <strong>睡眠對情緒健康至關重要！</strong> 當你睡得好時，你的大腦會處理你的情緒，並幫助你第二天更好地管理感受。把睡眠作為你心理和身體健康的優先事項！（英國NHS和世界衛生組織）' }
+  }
+];
+
+/* =============================================
+   QUIZ LOGIC
+============================================= */
+let quizState = 'start';
+let curQ      = 0;
+let answers   = new Array(QUESTIONS.length).fill(undefined);
+let scores    = { nutrition:0, exercise:0, sleep:0 };
+let tipIdxs   = [];
+
+const catColors = {
+  nutrition:'linear-gradient(90deg,#27AE60,#2ECC71)',
+  exercise: 'linear-gradient(90deg,#E67E22,#F39C12)',
+  sleep:    'linear-gradient(90deg,#8E44AD,#9B59B6)'
+};
+const catBadge = {
+  nutrition:{ cls:'cn', en:'🥦 Nutrition', zh:'🥦 營養' },
+  exercise: { cls:'ce', en:'🏃 Exercise',  zh:'🏃 運動' },
+  sleep:    { cls:'cs', en:'😴 Sleep',     zh:'😴 睡眠' }
+};
+const msgs = {
+  en:['Choose your answer below! 😊','Think carefully! 🤔','You are doing brilliantly! 💪','Almost there! 🌟','Take your time! 🎯'],
+  zh:['在下面選擇你的答案！😊','仔細思考！🤔','你做得很棒！💪','快到了！🌟','慢慢來！🎯']
+};
+
+function startQuiz() {
+  answers   = new Array(QUESTIONS.length).fill(undefined);
+  tipIdxs   = [];
+  curQ      = 0;
+  quizState = 'q';
+  document.getElementById('qs-start').classList.add('hidden');
+  document.getElementById('qs-results').classList.add('hidden');
+  document.getElementById('qs-question').classList.remove('hidden');
+  renderQ(0);
+}
+
+function renderQ(idx) {
+  const q    = QUESTIONS[idx];
+  const d    = q[lang] || q.en;
+  const saved = answers[idx];
+  const pct   = ((idx + 1) / QUESTIONS.length) * 100;
+
+  document.getElementById('progFill').style.width      = pct + '%';
+  document.getElementById('progFill').style.background = catColors[q.cat];
+  document.getElementById('progLbl').textContent =
+    lang === 'en' ? `Question ${idx+1} of ${QUESTIONS.length}` : `第 ${idx+1} 題，共 ${QUESTIONS.length} 題`;
+  document.getElementById('mascotMsg').textContent = msgs[lang][idx % msgs[lang].length];
+  document.getElementById('btnPrev').disabled = idx === 0;
+  document.getElementById('btnNext').disabled = saved === undefined;
+
+  const isLast = idx === QUESTIONS.length - 1;
+  document.getElementById('btnNext').textContent =
+    isLast ? (lang==='en' ? 'See Results 🎉' : '查看結果 🎉')
+           : (lang==='en' ? 'Next ➜'         : '下一題 ➜');
+
+  const cb = catBadge[q.cat];
+  let html = `<span class="cat-badge ${cb.cls}">${lang==='en'?cb.en:cb.zh}</span>
+              <div class="q-num">${lang==='en'?'Question':'第'} ${idx+1}${lang==='zh'?' 題':''}</div>
+              <div class="q-text">${d.q}</div>`;
+
+  const LTR = ['A','B','C','D'];
+  if (q.type === 'mc') {
+    html += '<div class="mc-grid">';
+    d.opts.forEach((opt,i) => {
+      const s = saved===i ? 'sel' : '';
+      html += `<button class="mc-opt ${s}" onclick="pick(${idx},${i},'mc')">
+                 <span class="mc-ltr">${LTR[i]}</span>${opt}
+               </button>`;
+    });
+    html += '</div>';
+  } else if (q.type === 'tf') {
+    const ts = saved==='true'  ? 'sel' : '';
+    const fs = saved==='false' ? 'sel' : '';
+    const tl = lang==='en' ? '✅ True'  : '✅ 對';
+    const fl = lang==='en' ? '❌ False' : '❌ 錯';
+    html += `<div class="tf-grid">
+               <button class="tf-opt tf-t ${ts}" onclick="pick(${idx},'true','tf')">${tl}</button>
+               <button class="tf-opt tf-f ${fs}" onclick="pick(${idx},'false','tf')">${fl}</button>
+             </div>`;
+  } else {
+    const EMJ = ['😬','🙂','😊','🌟'];
+    html += '<div class="freq-grid">';
+    d.opts.forEach((opt,i) => {
+      const s = saved===i ? 'sel' : '';
+      html += `<button class="freq-opt ${s}" onclick="pick(${idx},${i},'freq')">
+                 <span class="fe">${EMJ[i]}</span>${opt}
+               </button>`;
+    });
+    html += '</div>';
+  }
+
+  html += `<div class="fact-strip">
+             <div style="font-size:18px;flex-shrink:0;margin-top:1px;">💡</div>
+             <p><strong>${lang==='en'?'Fun Fact:':'趣味知識：'}</strong> ${d.fact}</p>
+           </div>`;
+
+  const card = document.getElementById('qCard');
+  card.className = `q-card cat-${q.cat} fadeup`;
+  card.innerHTML = html;
+  void card.offsetWidth;
+}
+
+function pick(qIdx, answer) {
+  answers[qIdx] = answer;
+  renderQ(qIdx);
+}
+
+function nextQ() {
+  if (curQ < QUESTIONS.length - 1) {
+    curQ++;
+    renderQ(curQ);
+    window.scrollTo({top:0});
+  } else {
+    calcAndShow();
+  }
+}
+
+function prevQ() {
+  if (curQ > 0) { curQ--; renderQ(curQ); window.scrollTo({top:0}); }
+}
+
+/* =============================================
+   RESULTS
+============================================= */
+function calcAndShow() {
+  quizState = 'r';
+  scores    = { nutrition:0, exercise:0, sleep:0 };
+  tipIdxs   = [];
+
+  QUESTIONS.forEach((q, i) => {
+    const ans = answers[i];
+    if (ans === undefined) return;
+    let pts = 0, trigger = false;
+    if (q.type === 'tf') {
+      pts     = q.scores[ans] || 0;
+      trigger = (ans === q.tipFor);
+    } else {
+      pts     = (q.scores[ans] !== undefined) ? q.scores[ans] : 0;
+      trigger = Array.isArray(q.tipFor) && q.tipFor.includes(ans);
+    }
+    scores[q.cat] += pts;
+    if (trigger) tipIdxs.push(i);
+  });
+
+  document.getElementById('qs-question').classList.add('hidden');
+  document.getElementById('qs-results').classList.remove('hidden');
+  buildResults();
+  window.scrollTo({top:0});
+}
+
+function buildResults() {
+  const total = scores.nutrition + scores.exercise + scores.sleep;
+  const MAX   = { nutrition:14, exercise:14, sleep:12, total:40 };
+
+  let badge, title, sub;
+  if (total >= 30) {
+    badge = '🏆';
+    title = lang==='en' ? 'Wellness Champion!'  : '健康冠軍！';
+    sub   = lang==='en' ? 'Outstanding! You have brilliant healthy habits. Keep it up! 🌟'
+                        : '出色！你有出色的健康習慣。繼續保持！🌟';
+  } else if (total >= 20) {
+    badge = '🌟';
+    title = lang==='en' ? 'Wellness Explorer!'  : '健康探索者！';
+    sub   = lang==='en' ? 'Great effort! You are on the right track. A few small changes and you could be a Champion! 💪'
+                        : '很好的努力！你走在正確的軌道上。幾個小改變，你就能成為冠軍！💪';
+  } else {
+    badge = '🌱';
+    title = lang==='en' ? 'Wellness Beginner!'  : '健康新手！';
+    sub   = lang==='en' ? 'Everyone starts somewhere! Read through your tips below to begin your wellness journey. 🌱'
+                        : '每個人都有起點！閱讀下面的建議，開始你的健康之旅。🌱';
+  }
+
+  document.getElementById('resBadge').textContent = badge;
+  document.getElementById('resTitle').textContent = title;
+  document.getElementById('resSub').textContent   = sub;
+  document.getElementById('scoreBig').textContent = total;
+  document.getElementById('scoreOf').textContent  = lang==='en' ? `out of ${MAX.total} points` : `滿分${MAX.total}分`;
+
+  document.getElementById('catLblN').innerHTML = lang==='en' ? '🥦 Nutrition' : '🥦 營養';
+  document.getElementById('catLblE').innerHTML = lang==='en' ? '🏃 Exercise'  : '🏃 運動';
+  document.getElementById('catLblS').innerHTML = lang==='en' ? '😴 Sleep'     : '😴 睡眠';
+
+  document.getElementById('barN').style.width = '0%';
+  document.getElementById('barE').style.width = '0%';
+  document.getElementById('barS').style.width = '0%';
+  document.getElementById('valN').textContent  = `${scores.nutrition}/${MAX.nutrition}`;
+  document.getElementById('valE').textContent  = `${scores.exercise}/${MAX.exercise}`;
+  document.getElementById('valS').textContent  = `${scores.sleep}/${MAX.sleep}`;
+
+  setTimeout(() => {
+    document.getElementById('barN').style.width = (scores.nutrition / MAX.nutrition * 100) + '%';
+    document.getElementById('barE').style.width = (scores.exercise  / MAX.exercise  * 100) + '%';
+    document.getElementById('barS').style.width = (scores.sleep     / MAX.sleep     * 100) + '%';
+  }, 400);
+
+  buildTips();
+  document.getElementById('langBtn').textContent = lang === 'en' ? '中文' : 'English';
+}
+
+function buildTips() {
+  const body = document.getElementById('tipsBody');
+  document.getElementById('tipsHdg').textContent =
+    lang==='en' ? 'Your Personal Wellness Tips 💡' : '你的個人健康建議 💡';
+  body.innerHTML = '';
+
+  if (tipIdxs.length === 0) {
+    body.innerHTML = `<p style="text-align:center;color:var(--mid);font-size:16px;font-weight:700;padding:10px 0">
+      ${lang==='en'
+        ? '🎉 Excellent! You did not trigger any improvement tips — you are already making great choices!'
+        : '🎉 出色！你沒有觸發任何改進建議——你已經做出了很好的選擇！'}
+    </p>`;
+  } else {
+    tipIdxs.forEach(i => {
+      const q   = QUESTIONS[i];
+      const tip = q.tips[lang] || q.tips.en;
+      const cls = { nutrition:'tn', exercise:'te', sleep:'ts' }[q.cat];
+      const ico = { nutrition:'🥦', exercise:'🏃', sleep:'😴' }[q.cat];
+      const el  = document.createElement('div');
+      el.className = `tip-card ${cls}`;
+      el.innerHTML = `<div class="tip-icon">${ico}</div><div class="tip-text">${tip}</div>`;
+      body.appendChild(el);
+    });
+  }
+
+  const lm = document.getElementById('lmRow');
+  lm.innerHTML = `<p style="width:100%;text-align:center;font-weight:800;color:var(--blue);font-size:15px;margin-bottom:8px">
+    ${lang==='en' ? '📚 Explore the fact pages to learn even more!' : '📚 探索知識頁面了解更多！'}
+  </p>`;
+  [{ k:'nutrition',e:'🥦',n:'Nutrition',z:'營養',m:14 },
+   { k:'exercise', e:'🏃',n:'Exercise', z:'運動',m:14 },
+   { k:'sleep',    e:'😴',n:'Sleep',    z:'睡眠',m:12 }
+  ].forEach(c => {
+    const pct = Math.round(scores[c.k] / c.m * 100);
+    const el  = document.createElement('div');
+    el.className = 'lm-chip';
+    el.innerHTML = `<span class="lm-emoji">${c.e}</span>
+                    <div class="lm-name">${lang==='en'?c.n:c.z}</div>
+                    <div class="lm-pct">${pct}% ${lang==='en'?'score':'得分'}</div>`;
+    el.onclick = () => gotoPage(c.k);
+    lm.appendChild(el);
+  });
+}
+
+function retakeQuiz() {
+  quizState = 'start';
+  document.getElementById('qs-results').classList.add('hidden');
+  document.getElementById('qs-question').classList.add('hidden');
+  document.getElementById('qs-start').classList.remove('hidden');
+  window.scrollTo({top:0});
+}
+
+/* =============================================
+   INIT
+============================================= */
+document.addEventListener('DOMContentLoaded', () => { applyLang(); });
+</script>
+</body>
+</html>
