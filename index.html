@@ -8,9 +8,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-/* =============================================
-   VARIABLES & RESET
-============================================= */
 :root {
   --blue:   #004086;
   --blue2:  #0060C0;
@@ -38,9 +35,6 @@ body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--text);-web
 img{max-width:100%;display:block}
 button{touch-action:manipulation;cursor:pointer}
 
-/* =============================================
-   NAVIGATION
-============================================= */
 nav{background:var(--blue);position:sticky;top:0;z-index:999;box-shadow:0 2px 12px rgba(0,0,0,.25)}
 .nav-in{display:flex;align-items:center;justify-content:space-between;padding:10px 18px;max-width:1200px;margin:0 auto;gap:8px;flex-wrap:wrap}
 .nav-brand{display:flex;align-items:center;gap:10px;cursor:pointer}
@@ -53,16 +47,10 @@ nav{background:var(--blue);position:sticky;top:0;z-index:999;box-shadow:0 2px 12
 .nb-lang{background:#fff!important;color:var(--blue)!important;border-color:#fff!important;font-weight:900!important;border-radius:30px!important;padding:6px 14px!important}
 .nb-lang:hover{background:var(--pale)!important}
 
-/* =============================================
-   PAGES
-============================================= */
 .page{display:none}
 .page.active{display:block}
 .hidden{display:none!important}
 
-/* =============================================
-   SHARED
-============================================= */
 .wrap{max-width:1100px;margin:0 auto;padding:40px 20px}
 .st{text-align:center;margin-bottom:34px}
 .st h2{font-size:28px;font-weight:900;color:var(--blue);margin-bottom:8px}
@@ -76,9 +64,6 @@ nav{background:var(--blue);position:sticky;top:0;z-index:999;box-shadow:0 2px 12
 @keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
 .fadeup{animation:fadeUp .35s ease forwards}
 
-/* =============================================
-   HOME
-============================================= */
 .hero{background:linear-gradient(140deg,#003272 0%,var(--blue) 45%,var(--blue2) 75%,var(--blue3) 100%);padding:56px 20px 60px;text-align:center;position:relative;overflow:hidden}
 .hero::before,.hero::after{content:'';position:absolute;border-radius:50%;background:rgba(255,255,255,.05);pointer-events:none}
 .hero::before{width:380px;height:380px;top:-90px;right:-60px}
@@ -101,7 +86,7 @@ nav{background:var(--blue);position:sticky;top:0;z-index:999;box-shadow:0 2px 12
 .vals{background:linear-gradient(135deg,#003272,var(--blue));border-radius:var(--rad);padding:36px 24px;text-align:center;margin-top:36px}
 .vals img{height:46px;object-fit:contain;filter:brightness(0) invert(1);margin:0 auto 14px}
 .vals h3{font-size:22px;font-weight:900;color:#fff;margin-bottom:10px}
-.vals p{font-size:14px;color:rgba(255,255,255,.88);max-width:620px;margin:0 auto 18px;line-height:1.6}
+.vals p{font-size:14px;color:rgba(255,255,255,.88);max-width:640px;margin:0 auto 18px;line-height:1.6}
 .chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
 .chip{background:rgba(255,255,255,.18);border:1.5px solid rgba(255,255,255,.38);color:#fff;padding:6px 16px;border-radius:30px;font-size:13px;font-weight:700}
 .cta-card{background:#fff;border-radius:var(--rad);box-shadow:var(--shad);padding:40px 30px;text-align:center;margin-top:36px}
@@ -109,9 +94,6 @@ nav{background:var(--blue);position:sticky;top:0;z-index:999;box-shadow:0 2px 12
 .cta-card h2{font-size:26px;font-weight:900;color:var(--blue);margin-bottom:10px}
 .cta-card p{font-size:15px;color:var(--mid);margin-bottom:24px;max-width:500px;margin-left:auto;margin-right:auto;line-height:1.6}
 
-/* =============================================
-   QUIZ — START SCREEN
-============================================= */
 .qs-start{text-align:center;padding:50px 20px;max-width:680px;margin:0 auto}
 .qs-start img{width:110px;margin:0 auto 18px}
 .qs-start h2{font-size:32px;font-weight:900;color:var(--blue);margin-bottom:14px}
@@ -122,9 +104,6 @@ nav{background:var(--blue);position:sticky;top:0;z-index:999;box-shadow:0 2px 12
 .inf .lbl{font-size:13px;font-weight:700;color:var(--mid)}
 .bdg-row{font-size:14px;color:var(--mid);font-weight:700;margin-bottom:26px}
 
-/* =============================================
-   QUIZ — QUESTION SCREEN
-============================================= */
 .q-wrap{max-width:760px;margin:0 auto;padding:24px 20px 40px}
 .prog-track{background:#DDE3EC;height:10px;border-radius:8px;overflow:hidden;margin-bottom:6px}
 .prog-fill{height:100%;border-radius:8px;background:linear-gradient(90deg,var(--blue),var(--blue3));transition:width .5s ease,background .5s}
@@ -167,9 +146,6 @@ nav{background:var(--blue);position:sticky;top:0;z-index:999;box-shadow:0 2px 12
 .btn-prev:hover{border-color:var(--blue);color:var(--blue)}
 .btn-prev:disabled{opacity:.3;cursor:default}
 
-/* =============================================
-   QUIZ — RESULTS
-============================================= */
 .res-hero{background:linear-gradient(140deg,#003272,var(--blue),var(--blue2));padding:50px 20px 70px;text-align:center}
 .res-badge{font-size:80px;display:block;margin-bottom:12px;animation:pop .6s ease}
 .res-title{font-size:30px;font-weight:900;color:#fff;margin-bottom:8px}
@@ -201,9 +177,6 @@ nav{background:var(--blue);position:sticky;top:0;z-index:999;box-shadow:0 2px 12
 .lm-pct{font-size:12px;color:var(--mid);font-weight:700}
 .res-acts{text-align:center;padding:22px 20px 36px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 
-/* =============================================
-   FACT PAGE HEROES
-============================================= */
 .fact-hero{padding:50px 20px;text-align:center}
 .fh-n{background:linear-gradient(135deg,#1E8449,#27AE60,#2ECC71)}
 .fh-e{background:linear-gradient(135deg,#CA6F1E,#E67E22,#F39C12)}
@@ -215,9 +188,6 @@ nav{background:var(--blue);position:sticky;top:0;z-index:999;box-shadow:0 2px 12
 .tap-bar{background:#fff;padding:16px 20px;text-align:center}
 .tap-bar p{font-size:15px;font-weight:700;color:var(--mid)}
 
-/* =============================================
-   FLIP CARDS
-============================================= */
 .flip-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:1050px;margin:0 auto;padding:34px 20px}
 .fc{height:225px;perspective:1000px;cursor:pointer}
 .fc-in{width:100%;height:100%;position:relative;transform-style:preserve-3d;transition:transform .6s cubic-bezier(.4,0,.2,1)}
@@ -238,9 +208,6 @@ nav{background:var(--blue);position:sticky;top:0;z-index:999;box-shadow:0 2px 12
 .ff-c{background:linear-gradient(145deg,#EAF2FF,#D6E8FF);color:#0A3070}
 .fb-c{background:linear-gradient(145deg,var(--blue),var(--blue2));color:#fff}
 
-/* =============================================
-   INFO BOXES
-============================================= */
 .ib{border:2px solid;border-radius:var(--rads);padding:20px 22px;display:flex;gap:14px;align-items:flex-start;max-width:1050px;margin:0 auto 28px}
 .ib-or{background:linear-gradient(135deg,#FEF3E8,#FDEBD0);border-color:var(--orange)}
 .ib-rd{background:linear-gradient(135deg,#FDECEA,#FDECEA);border-color:var(--coral)}
@@ -250,25 +217,16 @@ nav{background:var(--blue);position:sticky;top:0;z-index:999;box-shadow:0 2px 12
 .ib-title{font-weight:800;font-size:15px;margin-bottom:4px}
 .ib-body{font-size:13px;line-height:1.6;font-weight:600}
 
-/* =============================================
-   CONNECT PAGE
-============================================= */
 .cc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;max-width:900px;margin:0 auto}
 .cc{background:#fff;border-radius:var(--rad);box-shadow:var(--shad);padding:24px;border-top:5px solid}
 .cc h3{font-size:18px;font-weight:900;margin-bottom:10px}
 .cc p{font-size:14px;line-height:1.65;color:var(--mid)}
 
-/* =============================================
-   SOURCES & FOOTER
-============================================= */
 .sources{background:#E4EAF0;padding:16px 20px;text-align:center}
 .sources p{font-size:12px;color:var(--mid);font-weight:700}
 footer{background:var(--blue);color:rgba(255,255,255,.78);text-align:center;padding:22px 20px;font-size:13px}
 footer strong{color:#fff}
 
-/* =============================================
-   RESPONSIVE
-============================================= */
 @media(max-width:900px){
   .pillars,.cc-grid{grid-template-columns:repeat(2,1fr)}
   .flip-grid{grid-template-columns:repeat(2,1fr)}
@@ -290,9 +248,6 @@ footer strong{color:#fff}
 </head>
 <body>
 
-<!-- ==========================================
-     NAVIGATION
-========================================== -->
 <nav>
   <div class="nav-in">
     <div class="nav-brand" onclick="gotoPage('home')">
@@ -311,9 +266,7 @@ footer strong{color:#fff}
   </div>
 </nav>
 
-<!-- ==========================================
-     HOME PAGE
-========================================== -->
+<!-- ==================== HOME ==================== -->
 <div id="pg-home" class="page active">
   <div class="hero">
     <div class="hero-in">
@@ -350,19 +303,21 @@ footer strong{color:#fff}
       </div>
     </div>
 
+    <!-- UPDATED: Eight Virtues + One -->
     <div class="vals">
       <img src="https://tass-asia.org/wp-content/uploads/2021/12/ISFIdentityJpg-Edited-e1675850234220.png" alt="ISF Logo">
-      <h3 data-en="Wellness and our ISF Values 💙" data-zh="健康與弘立校訓 💙">Wellness and our ISF Values 💙</h3>
-      <p data-en="At ISF, our eight values guide everything we do — including how we look after ourselves. Caring for your body, mind and sleep reflects Balance, Harmony, Commitment and Care." data-zh="在弘立，我們的八大校訓指導我們所做的一切——包括我們如何照顧自己。照顧好身體、思想和睡眠，體現了平衡、和諧、承諾和關愛的精神。">At ISF, our eight values guide everything we do — including how we look after ourselves. Caring for your body, mind and sleep reflects Balance, Harmony, Commitment and Care.</p>
+      <h3 data-en="Wellness and The Eight Virtues + One (八德一智) 💙" data-zh="健康與八德一智 💙">Wellness and The Eight Virtues + One (八德一智) 💙</h3>
+      <p data-en="At ISF, we are guided by the Eight Virtues and One (八德一智). The eight virtues — Loyalty (忠), Respect (孝), Compassion (仁), Love and Passion (愛), Etiquette (禮), Principles (義), Harmony (和) and Balance (平) — all culminate in the central virtue of Wisdom (智). Every time you nourish your body, move with energy and protect your sleep, you are living out each of these nine virtues. Wellness is wisdom in action! 🌟" data-zh="在弘立，我們以八德一智為指導。八種美德——忠、孝、仁、愛、禮、義、和、平——全部歸於核心美德「智」。每當你滋養身體、充滿活力地運動和保護睡眠，你就是在踐行這九種美德。健康就是智慧的行動！🌟">At ISF, we are guided by the Eight Virtues and One (八德一智). The eight virtues — Loyalty (忠), Respect (孝), Compassion (仁), Love and Passion (愛), Etiquette (禮), Principles (義), Harmony (和) and Balance (平) — all culminate in the central virtue of Wisdom (智). Every time you nourish your body, move with energy and protect your sleep, you are living out each of these nine virtues. Wellness is wisdom in action! 🌟</p>
       <div class="chips">
-        <span class="chip" data-en="⚖️ Balance"    data-zh="⚖️ 平衡">⚖️ Balance</span>
-        <span class="chip" data-en="🌿 Harmony"    data-zh="🌿 和諧">🌿 Harmony</span>
-        <span class="chip" data-en="💪 Commitment" data-zh="💪 承諾">💪 Commitment</span>
-        <span class="chip" data-en="❤️ Care"       data-zh="❤️ 關愛">❤️ Care</span>
-        <span class="chip" data-en="🔥 Passion"    data-zh="🔥 熱情">🔥 Passion</span>
-        <span class="chip" data-en="🎖️ Integrity"  data-zh="🎖️ 正直">🎖️ Integrity</span>
-        <span class="chip" data-en="🤝 Respect"    data-zh="🤝 尊重">🤝 Respect</span>
-        <span class="chip" data-en="🌟 Courtesy"   data-zh="🌟 禮貌">🌟 Courtesy</span>
+        <span class="chip" data-en="忠 Loyalty &amp; Commitment" data-zh="忠 忠誠承諾">忠 Loyalty &amp; Commitment</span>
+        <span class="chip" data-en="孝 Respect &amp; Obligation" data-zh="孝 尊重責任">孝 Respect &amp; Obligation</span>
+        <span class="chip" data-en="仁 Compassion &amp; Kindness" data-zh="仁 慈悲善良">仁 Compassion &amp; Kindness</span>
+        <span class="chip" data-en="愛 Love &amp; Passion" data-zh="愛 愛與熱情">愛 Love &amp; Passion</span>
+        <span class="chip" data-en="禮 Etiquette &amp; Ceremony" data-zh="禮 禮節儀式">禮 Etiquette &amp; Ceremony</span>
+        <span class="chip" data-en="義 Principles &amp; Justice" data-zh="義 原則公義">義 Principles &amp; Justice</span>
+        <span class="chip" data-en="和 Harmony &amp; Tolerance" data-zh="和 和諧包容">和 Harmony &amp; Tolerance</span>
+        <span class="chip" data-en="平 Balance &amp; Equality" data-zh="平 平衡平等">平 Balance &amp; Equality</span>
+        <span class="chip" style="background:rgba(255,215,0,.22);border-color:rgba(255,215,0,.65);font-weight:900" data-en="✨ 智 Intelligence &amp; Wisdom" data-zh="✨ 智 智慧">✨ 智 Intelligence &amp; Wisdom</span>
       </div>
     </div>
 
@@ -375,16 +330,12 @@ footer strong{color:#fff}
   </div>
 </div>
 
-<!-- ==========================================
-     QUIZ PAGE
-========================================== -->
+<!-- ==================== QUIZ ==================== -->
 <div id="pg-quiz" class="page">
-
-  <!-- Start Screen -->
   <div id="qs-start" class="qs-start">
     <img src="https://whatsticker.online/stickers_asset/ws-pack-419479zFRuL0P/20026ccb71619a.png" alt="Mascot">
     <h2 data-en="The ISF Wellness Quiz 🧠" data-zh="弘立健康測驗 🧠">The ISF Wellness Quiz 🧠</h2>
-    <p data-en="Answer 20 questions about your habits and health knowledge. Be honest — this quiz is just for you! At the end you will earn a badge and receive personalised tips. 😊" data-zh="回答20個關於你習慣和健康知識的問題。請誠實回答——這個測驗只是為你服務！最後你將獲得徽章和個人化建議。😊">Answer 20 questions about your habits and health knowledge. Be honest — this quiz is just for you! At the end you will earn a badge and receive personalised tips. 😊</p>
+    <p data-en="Answer 20 questions about your everyday habits and how you feel. Be honest — this quiz is just for you! At the end you will earn a badge and receive personalised tips. 😊" data-zh="回答20個關於你日常習慣和感受的問題。請誠實回答——這個測驗只是為你服務！最後你將獲得徽章和個人化建議。😊">Answer 20 questions about your everyday habits and how you feel. Be honest — this quiz is just for you! At the end you will earn a badge and receive personalised tips. 😊</p>
     <div class="info-row">
       <div class="inf"><span class="big">20</span><span class="lbl" data-en="Questions" data-zh="問題">Questions</span></div>
       <div class="inf"><span class="big">3</span><span class="lbl" data-en="Categories" data-zh="類別">Categories</span></div>
@@ -394,7 +345,6 @@ footer strong{color:#fff}
     <button class="btn-cta" onclick="startQuiz()" data-en="Let's Go! ➜" data-zh="出發！ ➜">Let's Go! ➜</button>
   </div>
 
-  <!-- Question Screen -->
   <div id="qs-question" class="hidden">
     <div class="q-wrap">
       <div class="prog-track"><div class="prog-fill" id="progFill" style="width:5%"></div></div>
@@ -411,7 +361,6 @@ footer strong{color:#fff}
     </div>
   </div>
 
-  <!-- Results Screen -->
   <div id="qs-results" class="hidden">
     <div class="res-hero">
       <span class="res-badge" id="resBadge">🌟</span>
@@ -452,9 +401,7 @@ footer strong{color:#fff}
   </div>
 </div>
 
-<!-- ==========================================
-     NUTRITION PAGE
-========================================== -->
+<!-- ==================== NUTRITION ==================== -->
 <div id="pg-nutrition" class="page">
   <div class="fact-hero fh-n">
     <div class="fh-icon">🥦</div>
@@ -475,9 +422,7 @@ footer strong{color:#fff}
   <div class="sources"><p data-en="Sources: NHS UK Eat Well Guide · WHO Nutrition Guidelines · Hong Kong Department of Health" data-zh="資料來源：英國NHS飲食指南 · 世界衛生組織營養指南 · 香港衛生署">Sources: NHS UK Eat Well Guide · WHO Nutrition Guidelines · Hong Kong Department of Health</p></div>
 </div>
 
-<!-- ==========================================
-     EXERCISE PAGE
-========================================== -->
+<!-- ==================== EXERCISE ==================== -->
 <div id="pg-exercise" class="page">
   <div class="fact-hero fh-e">
     <div class="fh-icon">🏃</div>
@@ -489,9 +434,7 @@ footer strong{color:#fff}
   <div class="sources"><p data-en="Sources: WHO Physical Activity Guidelines · NHS UK · Hong Kong Department of Health · CDC" data-zh="資料來源：世界衛生組織體育活動指南 · 英國NHS · 香港衛生署 · 美國CDC">Sources: WHO Physical Activity Guidelines · NHS UK · Hong Kong Department of Health · CDC</p></div>
 </div>
 
-<!-- ==========================================
-     SLEEP PAGE
-========================================== -->
+<!-- ==================== SLEEP ==================== -->
 <div id="pg-sleep" class="page">
   <div class="fact-hero fh-s">
     <div class="fh-icon">😴</div>
@@ -512,9 +455,7 @@ footer strong{color:#fff}
   <div class="sources"><p data-en="Sources: NHS UK · WHO · Healthier Together NHS · Hong Kong Department of Health" data-zh="資料來源：英國NHS · 世界衛生組織 · 更健康共同NHS · 香港衛生署">Sources: NHS UK · WHO · Healthier Together NHS · Hong Kong Department of Health</p></div>
 </div>
 
-<!-- ==========================================
-     CONNECT PAGE
-========================================== -->
+<!-- ==================== CONNECT ==================== -->
 <div id="pg-connect" class="page">
   <div class="fact-hero fh-c">
     <div class="fh-icon">💙</div>
@@ -536,9 +477,11 @@ footer strong{color:#fff}
         <h3 style="color:var(--purple)">😴 Sleep and Your Emotions</h3>
         <p data-en="When you do not get enough sleep, it becomes much harder to manage your emotions and focus in class. The NHS highlights that poor sleep in children is linked to increased anxiety, low mood and difficulty with friendships and learning. A good night's sleep helps your brain process the events of the day — including any worries — so you wake up feeling balanced and refreshed. 🌙" data-zh="當你睡眠不足時，管理情緒和在課堂上集中注意力就會變得更加困難。英國NHS強調，兒童睡眠不足與焦慮增加、情緒低落以及友誼和學習困難有關。良好的夜間睡眠有助於你的大腦處理當天的事件——包括任何擔憂——讓你在感到平衡和精神煥發中醒來。🌙">When you do not get enough sleep, it becomes much harder to manage your emotions and focus in class. The NHS highlights that poor sleep in children is linked to increased anxiety, low mood and difficulty with friendships and learning. A good night's sleep helps your brain process the events of the day — including any worries — so you wake up feeling balanced and refreshed. 🌙</p>
       </div>
+
+      <!-- UPDATED: Eight Virtues + One card -->
       <div class="cc" style="border-color:var(--blue)">
-        <h3 style="color:var(--blue)">⚖️ The ISF Value of Balance</h3>
-        <p data-en="At ISF, Balance is one of our most treasured values. True balance means caring for your whole self — your body, your mind and your emotions. When you eat well, move regularly and sleep enough, you are living in balance. This helps you bring your very best self to school, to your friendships and to everything you do. Balance is not about perfection — it is about small, positive choices every day. 🌿" data-zh="在弘立，平衡是我們最珍視的價值觀之一。真正的平衡意味著關心你的整個自我——你的身體、你的思想和你的情感。當你吃得好、定期運動和充足睡眠時，你就是在平衡地生活。這有助於你將最好的自己帶到學校、帶到你的友誼中，帶到你所做的一切事情中。平衡不是關於完美——而是關於每天做出小小的、積極的選擇。🌿">At ISF, Balance is one of our most treasured values. True balance means caring for your whole self — your body, your mind and your emotions. When you eat well, move regularly and sleep enough, you are living in balance. This helps you bring your very best self to school, to your friendships and to everything you do. Balance is not about perfection — it is about small, positive choices every day. 🌿</p>
+        <h3 style="color:var(--blue)" data-en="✨ The Eight Virtues + One (八德一智)" data-zh="✨ 八德一智">✨ The Eight Virtues + One (八德一智)</h3>
+        <p data-en="At ISF, the eight virtues — 忠 (Loyalty), 孝 (Respect), 仁 (Compassion), 愛 (Passion), 禮 (Etiquette), 義 (Principles), 和 (Harmony) and 平 (Balance) — all culminate in 智 (Wisdom). Caring for your health connects to every single one. Choosing nutritious food reflects 仁 (compassion for yourself). Committing to exercise reflects 忠 (loyalty to yourself). Protecting your sleep reflects 平 (balance). Every healthy choice you make is an act of 智 — wisdom in action! 🌟" data-zh="在弘立，八種美德——忠（忠誠）、孝（尊重）、仁（慈悲）、愛（熱情）、禮（禮節）、義（原則）、和（和諧）和平（平衡）——全部歸於「智」（智慧）。照顧好健康與每一種美德都有直接聯繫。選擇營養食物體現了仁（對自己的慈悲）。承諾鍛煉體現了忠（對自己的忠誠）。保護睡眠體現了平（平衡）。你所做的每一個健康選擇都是「智」——智慧在行動！🌟">At ISF, the eight virtues — 忠 (Loyalty), 孝 (Respect), 仁 (Compassion), 愛 (Passion), 禮 (Etiquette), 義 (Principles), 和 (Harmony) and 平 (Balance) — all culminate in 智 (Wisdom). Caring for your health connects to every single one. Choosing nutritious food reflects 仁 (compassion for yourself). Committing to exercise reflects 忠 (loyalty to yourself). Protecting your sleep reflects 平 (balance). Every healthy choice you make is an act of 智 — wisdom in action! 🌟</p>
       </div>
     </div>
 
@@ -556,18 +499,12 @@ footer strong{color:#fff}
   <div class="sources"><p data-en="Sources: NHS UK · WHO · Hong Kong Department of Health · CDC" data-zh="資料來源：英國NHS · 世界衛生組織 · 香港衛生署 · 美國CDC">Sources: NHS UK · WHO · Hong Kong Department of Health · CDC</p></div>
 </div>
 
-<!-- ==========================================
-     FOOTER
-========================================== -->
 <footer>
   <strong data-en="ISF Wellness Hub" data-zh="弘立健康中心">ISF Wellness Hub</strong> &nbsp;·&nbsp;
-  <span data-en="Created for Grade 4 students at The ISF Academy, Hong Kong" data-zh="為香港弘立書院四年級學生而設">Created for Grade 4 students at The ISF Academy, Hong Kong</span><br>
+  <span data-en="Created for students at The ISF Academy, Hong Kong" data-zh="為香港弘立書院學生而設">Created for students at The ISF Academy, Hong Kong</span><br>
   <small style="opacity:.7" data-en="Content based on NHS UK, WHO, Hong Kong Department of Health and CDC guidelines." data-zh="內容基於英國NHS、世界衛生組織、香港衛生署及美國CDC的指引。">Content based on NHS UK, WHO, Hong Kong Department of Health and CDC guidelines.</small>
 </footer>
 
-<!-- ==========================================
-     JAVASCRIPT
-========================================== -->
 <script>
 'use strict';
 
@@ -617,8 +554,8 @@ const CARDS = {
       be:'Children aged 9 to 13 should drink 6 to 8 glasses of water each day. Water helps your brain concentrate, regulates your body temperature and keeps your kidneys healthy. Fizzy drinks and juice are not the same thing! 💧',
       bz:'9至13歲的兒童每天應喝6至8杯水。水有助於大腦集中注意力、調節體溫並保持腎臟健康。汽水和果汁並不一樣！💧', src:'NHS UK' },
     { emoji:'🍱', fe:'The Eat Well Plate', fz:'健康飲食餐盤',
-      be:'A balanced meal should include: plenty of vegetables, some whole grains (like brown rice or wholemeal bread), a source of protein, and a small amount of healthy fats. Try to make half your plate fruit and vegetables! 🍱',
-      bz:'均衡的餐食應包括：大量蔬菜、一些全穀物（如糙米或全麥麵包）、蛋白質來源和少量健康脂肪。嘗試讓你盤子的一半是水果和蔬菜！🍱', src:'NHS UK Eat Well Guide' },
+      be:'A balanced meal should include: plenty of vegetables, some whole grains (like brown rice or wholemeal bread), a source of protein (such as chicken, tofu or eggs), and a small amount of healthy fats. Try to make half your plate fruit and vegetables! 🍱',
+      bz:'均衡的餐食應包括：大量蔬菜、一些全穀物（如糙米或全麥麵包）、蛋白質來源（如雞肉、豆腐或雞蛋）和少量健康脂肪。嘗試讓你盤子的一半是水果和蔬菜！🍱', src:'NHS UK Eat Well Guide' },
     { emoji:'🍫', fe:'Sugar Watch!', fz:'注意糖分！',
       be:'Children aged 7 to 10 should have no more than 24g of free sugars per day — about 6 teaspoons! A single can of cola contains around 35g of sugar. Too much sugar can harm your teeth and cause energy crashes. 😬',
       bz:'7至10歲的兒童每天不應攝入超過24克的游離糖——大約6茶匙！一罐可樂含有約35克糖。太多糖會傷害你的牙齒並導致能量驟降。😬', src:'NHS UK' },
@@ -651,7 +588,7 @@ const CARDS = {
   ],
   sleep: [
     { emoji:'⏰', fe:'9 to 11 Hours a Night!', fz:'每晚9至11小時！',
-      be:'The NHS recommends children aged 6 to 13 get between 9 and 11 hours of sleep every night. Consistent sleep schedules — even at weekends — help your body clock work at its very best! ⏰',
+      be:'The NHS recommends children aged 6 to 13 get between 9 and 11 hours of sleep every night! Consistent sleep schedules — even at weekends — help your body clock work at its very best! ⏰',
       bz:'英國NHS建議6至13歲的兒童每晚睡9至11小時。一致的睡眠時間表——即使是在週末——有助於你的生理時鐘以最佳狀態運作！⏰', src:'NHS UK' },
     { emoji:'🧠', fe:'Sleep and Memory', fz:'睡眠和記憶',
       be:'While you sleep, your brain consolidates memories — sorting through everything you have learned and storing the important information! This is why sleeping well before a test is far better than staying up late to revise. 🧠',
@@ -669,6 +606,7 @@ const CARDS = {
       be:'A consistent bedtime routine signals your brain to start producing melatonin. Try: a warm bath, some reading or gentle drawing, and lights out at the same time each night. Your brain loves routine and predictability! 🛁',
       bz:'一致的就寢程序向你的大腦發出開始產生褪黑素的信號。嘗試：溫水澡、一些閱讀或輕柔的繪畫，每晚在同一時間熄燈。你的大腦喜歡規律和可預測性！🛁', src:'NHS UK' }
   ],
+  /* UPDATED: 4 original + 2 new cards = 6 total */
   connect: [
     { emoji:'🔄', fe:'The Wellness Cycle', fz:'健康循環',
       be:'Good sleep gives you energy to exercise. Exercise helps you sleep better at night. Nutritious food gives you energy to move and focus! These three pillars support each other in a beautiful, powerful cycle. 🔄',
@@ -676,12 +614,20 @@ const CARDS = {
     { emoji:'😊', fe:'Food and Your Mood', fz:'食物和你的情緒',
       be:"Around 95% of serotonin — one of your brain's key happiness chemicals — is produced in your gut! Eating a diet rich in vegetables, fibre and whole grains supports your gut health and, in turn, your mood and mental wellbeing. 😊",
       bz:'大約95%的血清素——你大腦的關鍵幸福化學物質之一——在你的腸道中產生！食用富含蔬菜、纖維和全穀物的飲食有助於你的腸道健康，進而有助於你的情緒和心理健康。😊', src:'NHS UK' },
-    { emoji:'⚖️', fe:'Balance — Our ISF Value', fz:'平衡——我們的弘立價值觀',
-      be:"ISF's value of Balance applies perfectly to wellness! True balance means nourishing your body through good food and movement, and caring for your mind through adequate rest and sleep. Small daily choices create a balanced, fulfilling life! ⚖️",
-      bz:'弘立的「平衡」價值觀完美地適用於健康！真正的平衡意味著通過良好的食物和運動滋養你的身體，並通過充足的休息和睡眠照顧你的思想。每天的小選擇創造了平衡、充實的生活！⚖️', src:'ISF Academy Values' },
+    { emoji:'平', fe:'Ping (平) — Balance and Equality', fz:'平 — 平衡與平等',
+      be:"The ISF virtue of Ping (平) — Balance and Equality — applies perfectly to wellness! True balance means nourishing your body through good food and movement, and caring for your mind through adequate rest. Small daily choices, guided by the wisdom of Zhi (智), create a balanced and fulfilling life! ⚖️",
+      bz:'弘立的「平」德——平衡與平等——完美地適用於健康！真正的平衡意味著通過良好的食物和運動滋養你的身體，並通過充足的休息照顧你的思想。在「智」的智慧指引下，每天的小選擇創造了平衡而充實的生活！⚖️', src:'ISF Academy Values — 八德一智' },
     { emoji:'🌱', fe:'Small Changes Win!', fz:'小改變創造大勝利！',
       be:'You do not need to change everything at once! Research shows that just one or two small positive changes — like drinking more water or going to bed 15 minutes earlier — can have a significant, lasting impact on your health. 🌱',
-      bz:'你不需要一次改變一切！研究表明，僅僅一兩個小的積極改變——比如多喝水或提前15分鐘上床——可以對你的健康產生顯著、持久的影響。🌱', src:'WHO and NHS UK' }
+      bz:'你不需要一次改變一切！研究表明，僅僅一兩個小的積極改變——比如多喝水或提前15分鐘上床——可以對你的健康產生顯著、持久的影響。🌱', src:'WHO and NHS UK' },
+    /* NEW Card 5 */
+    { emoji:'📵', fe:'Screens, Sleep and Wellbeing', fz:'屏幕、睡眠與健康',
+      be:'Research from Hong Kong shows that many young people spend significant time on screens each day for entertainment — and this directly impacts sleep quality, physical activity and mental wellbeing. The virtue of Ping (平) — Balance and Equality — is your guide: use technology wisely and in moderation! 📵',
+      bz:'香港的研究顯示，許多年輕人每天花大量時間在屏幕上娛樂——這直接影響睡眠質量、體育活動和心理健康。「平」德——平衡與平等——是你的指引：明智而適度地使用科技！📵', src:'HK Department of Health and WHO' },
+    /* NEW Card 6 */
+    { emoji:'智', fe:'Zhi (智) — Wisdom in Action', fz:'智 — 行動中的智慧',
+      be:"At the heart of ISF's Eight Virtues and One is Zhi (智) — Intelligence and Wisdom. True wisdom shows up every single day: choosing nutritious food, moving your body, protecting your sleep and caring for your mental health. Every healthy habit you build is an act of Zhi! 💡",
+      bz:'弘立八德一智的核心是「智」——智慧與明智。真正的智慧每天都會展現：選擇營養食物、活動身體、保護睡眠和照顧心理健康。你建立的每個健康習慣都是「智」的體現！💡', src:'ISF Academy Values — 八德一智' }
   ]
 };
 
@@ -715,221 +661,276 @@ function buildFlipCards(page) {
 }
 
 /* =============================================
-   QUIZ DATA — 20 QUESTIONS
+   QUIZ DATA — 20 LIFESTYLE QUESTIONS
+   All questions ask about the student's own
+   habits and feelings — not health knowledge.
 ============================================= */
 const QUESTIONS = [
+
   /* ---- NUTRITION Q1–Q7 ---- */
+
+  /* Q1 — Fruit and vegetables */
   { cat:'nutrition', type:'mc',
     en:{ q:'How many portions of fruit and vegetables do you aim to eat each day? 🍎🥦',
-         opts:['1 to 2 portions','3 to 4 portions','5 or more portions 🌟','I do not usually count'],
-         fact:'⭐ The NHS recommends eating at least 5 portions of fruit and vegetables every day! A portion is roughly a handful — and frozen or tinned vegetables count too.' },
+         opts:['1 to 2 portions','3 to 4 portions','5 or more portions 🌟','I do not usually keep track'],
+         fact:'🌈 Eating a variety of coloured vegetables and fruits is a great way to get different vitamins and minerals. Red, orange, green and purple all provide different nutrients — so a rainbow plate is a healthy plate! (NHS UK)' },
     zh:{ q:'你每天嘗試吃多少份水果和蔬菜？🍎🥦',
          opts:['1至2份','3至4份','5份或以上 🌟','我通常不計算'],
-         fact:'⭐ 英國NHS建議每天至少吃5份水果和蔬菜！一份大約是一把——冷凍或罐裝蔬菜也算數。' },
+         fact:'🌈 吃各種顏色的蔬菜和水果是獲得不同維生素和礦物質的好方法。紅色、橙色、綠色和紫色都提供不同的營養素——所以彩虹餐盤就是健康餐盤！（英國NHS）' },
     scores:[0,1,2,0], tipFor:[0,1,3],
-    tips:{ en:'🥦 <strong>Try to reach 5 portions a day!</strong> Add a piece of fruit to breakfast or snack on carrot sticks instead of crisps. Small swaps make a big difference! (NHS UK)',
-           zh:'🥦 <strong>嘗試每天達到5份！</strong> 在早餐中加入一份水果，或以胡蘿蔔條代替薯片作為零食。小小的改變能帶來大不同！（英國NHS）' }
+    tips:{ en:'🥦 <strong>Try to eat more fruit and vegetables every day!</strong> Add a piece of fruit to breakfast, snack on carrot sticks or add a handful of vegetables to your dinner. Small swaps really do make a big difference! (NHS UK)',
+           zh:'🥦 <strong>嘗試每天多吃水果和蔬菜！</strong> 在早餐加入一份水果，以胡蘿蔔條作為零食，或在晚餐加入一把蔬菜。小小的改變真的能帶來大不同！（英國NHS）' }
   },
+
+  /* Q2 — Water */
   { cat:'nutrition', type:'freq',
     en:{ q:'How often do you drink water as your main drink during the day? 💧',
          opts:['Never 😬','Sometimes 🙂','Most days 😊','Always! 🌊'],
-         fact:'💧 Your body is about 60% water! The NHS recommends children drink 6 to 8 glasses of water every day. Staying hydrated helps your brain concentrate and keeps your energy levels stable.' },
+         fact:'💧 Your body is about 60% water! Even mild dehydration can make it harder to concentrate, lower your mood and cause tiredness. Keeping a water bottle at your desk is one of the simplest habits you can build for better focus. (NHS UK)' },
     zh:{ q:'你多常在白天主要喝水？💧',
          opts:['從不 😬','有時 🙂','大多數日子 😊','總是！🌊'],
-         fact:'💧 你的身體約由60%的水組成！英國NHS建議兒童每天喝6至8杯水。保持水分有助於大腦集中注意力，保持能量水平穩定。' },
+         fact:'💧 你的身體約由60%的水組成！即使是輕度脫水也會使注意力更難集中、情緒低落並引起疲倦。在桌上放一個水瓶是你能建立的最簡單的習慣之一，有助於更好地集中注意力。（英國NHS）' },
     scores:[0,1,2,2], tipFor:[0,1],
-    tips:{ en:'💧 <strong>Drink more water!</strong> Try keeping a water bottle at your desk. Swap fizzy drinks and juice for water — your brain and body will feel the difference almost immediately! (NHS UK)',
-           zh:'💧 <strong>多喝水！</strong> 嘗試在桌上放一個水瓶。用水代替汽水和果汁——你的大腦和身體幾乎立即就能感受到差異！（英國NHS）' }
+    tips:{ en:'💧 <strong>Drink more water throughout the day!</strong> Try keeping a water bottle on your desk and taking sips regularly. Swap fizzy drinks and juice for water — your brain and body will feel the difference almost immediately! (NHS UK)',
+           zh:'💧 <strong>整天多喝水！</strong> 嘗試在桌上放一個水瓶並定期喝幾口。用水代替汽水和果汁——你的大腦和身體幾乎立即就能感受到差異！（英國NHS）' }
   },
+
+  /* Q3 — Fast food */
   { cat:'nutrition', type:'freq',
     en:{ q:"How often do you eat fast food (such as McDonald's, KFC or similar)? 🍔",
          opts:['Rarely or never 🌟','Once a week or less 👍','A few times a week 😬','Every day 😰'],
-         fact:'🍟 Fast food can be enjoyed as an occasional treat! However, eating it regularly means consuming a lot of hidden salt, saturated fat and sugar. Balance is everything. (NHS UK)' },
+         fact:'🍟 Fast food restaurants in Hong Kong are incredibly popular! They can absolutely be enjoyed as an occasional treat. The key thing to know is that regular fast food meals tend to be high in hidden salt, saturated fat and sugar — more than homemade meals. (NHS UK)' },
     zh:{ q:'你多常吃快餐（如麥當勞、肯德基或類似的）？🍔',
          opts:['很少或從不 🌟','每週一次或更少 👍','每週幾次 😬','每天 😰'],
-         fact:'🍟 快餐可以作為偶爾的享受！然而，經常吃意味著攝入大量隱藏的鹽、飽和脂肪和糖。平衡是一切。（英國NHS）' },
+         fact:'🍟 香港的快餐廳非常受歡迎！它們絕對可以作為偶爾的享受。關鍵是要知道，經常吃快餐餐食往往含有比自製食物更多的隱藏鹽、飽和脂肪和糖。（英國NHS）' },
     scores:[2,1,0,0], tipFor:[2,3],
-    tips:{ en:'🍔 <strong>Try to reduce fast food!</strong> Fast food is often high in salt, sugar and saturated fat. It is fine as an occasional treat, but aim for home-cooked meals most of the time. (NHS UK)',
-           zh:'🍔 <strong>嘗試減少快餐！</strong> 快餐通常含有高鹽、高糖和飽和脂肪。偶爾作為享受是可以的，但大多數時候要以家常飯為主。（英國NHS）' }
+    tips:{ en:'🍔 <strong>Try to reduce fast food!</strong> Fast food is often high in salt, sugar and saturated fat. It is perfectly fine as an occasional treat, but aim for home-cooked or freshly prepared meals most of the time. Your energy and concentration will benefit! (NHS UK)',
+           zh:'🍔 <strong>嘗試減少快餐！</strong> 快餐通常含有高鹽、高糖和飽和脂肪。偶爾作為享受是完全沒問題的，但大多數時候要以家常飯或新鮮烹飪的食物為主。你的能量和注意力將會受益！（英國NHS）' }
   },
-  { cat:'nutrition', type:'tf',
-    en:{ q:'True or False: Drinking fizzy drinks (like sodas and cola) every day is fine as part of a healthy diet. 🥤',
-         fact:'🥤 A single can of cola can contain up to 9 teaspoons of sugar — far more than the recommended daily amount for your age! The NHS recommends water, milk or diluted fruit juice as the best drink choices for children.' },
-    zh:{ q:'對或錯：每天喝汽水（如蘇打水和可樂）作為健康飲食的一部分是可以的。🥤',
-         fact:'🥤 一罐可樂可能含有多達9茶匙的糖——遠遠超過你這個年齡的每日推薦量！英國NHS建議水、牛奶或稀釋果汁是兒童最佳飲料選擇。' },
-    scores:{ true:0, false:2 }, correct:'false', tipFor:'true',
-    tips:{ en:'🥤 <strong>Watch out for sugary drinks!</strong> Fizzy drinks are packed with added sugar. Choose water, milk or diluted fruit juice instead. Too much sugar can harm your teeth and cause energy crashes throughout the day. (NHS UK)',
-           zh:'🥤 <strong>注意含糖飲料！</strong> 汽水含有大量添加糖。選擇水、牛奶或稀釋果汁代替。太多糖會傷害你的牙齒並導致一天中能量驟降。（英國NHS）' }
-  },
+
+  /* Q4 — Sugary drinks (UPDATED: was T/F knowledge) */
   { cat:'nutrition', type:'mc',
-    en:{ q:'Which of the following is the best source of protein for your body? 💪',
-         opts:['Chocolate biscuits 🍪','Crisps 🥔','Chicken, tofu, eggs or lentils 🍗 🌟','White bread 🍞'],
-         fact:'💪 Protein builds and repairs your muscles and supports your immune system! Great sources include meat, fish, eggs, tofu, beans and lentils. Try to include some protein at every meal. (NHS UK Eat Well Guide)' },
-    zh:{ q:'以下哪個是你身體最好的蛋白質來源？💪',
-         opts:['巧克力餅乾 🍪','薯片 🥔','雞肉、豆腐、雞蛋或扁豆 🍗 🌟','白麵包 🍞'],
-         fact:'💪 蛋白質構建和修復你的肌肉並支持你的免疫系統！很好的來源包括肉類、魚類、雞蛋、豆腐、豆類和扁豆。嘗試在每頓飯中都包括一些蛋白質。（英國NHS飲食指南）' },
-    scores:[0,0,2,0], tipFor:[0,1,3],
-    tips:{ en:'💪 <strong>Include more protein in your meals!</strong> Protein helps your muscles, brain and immune system. Great choices include chicken, fish, tofu, eggs, beans and lentils. Try to add some to every meal! (NHS UK)',
-           zh:'💪 <strong>在你的飲食中加入更多蛋白質！</strong> 蛋白質有助於你的肌肉、大腦和免疫系統。很好的選擇包括雞肉、魚類、豆腐、雞蛋、豆類和扁豆。嘗試在每頓飯中加入一些！（英國NHS）' }
+    en:{ q:'How many sugary drinks (such as fizzy drinks, bubble tea or fruit juice) do you usually have on a typical day? 🥤',
+         opts:['None — I mainly drink water 🌟','About one per day 😊','Two or three per day 😬','More than three per day 😰'],
+         fact:'🥤 Water is the best drink for your brain and body! It keeps your energy steady, helps you concentrate and contains no added sugar. Your kidneys, skin and joints also all work better when you are well hydrated. (NHS UK)' },
+    zh:{ q:'你在典型的一天裡通常喝多少含糖飲料（如汽水、珍珠奶茶或果汁）？🥤',
+         opts:['沒有——我主要喝水 🌟','每天約一杯 😊','每天兩到三杯 😬','每天超過三杯 😰'],
+         fact:'🥤 水是你大腦和身體的最佳飲料！它保持你的能量穩定，幫助你集中注意力，且不含添加糖。當你補充充足水分時，你的腎臟、皮膚和關節也都能更好地運作。（英國NHS）' },
+    scores:[2,1,0,0], tipFor:[1,2,3],
+    tips:{ en:'🥤 <strong>Try to cut down on sugary drinks!</strong> Even one sugary drink a day adds up quickly in terms of sugar. Swap fizzy drinks, bubble tea and juice for water most of the time. Your teeth, energy levels and concentration will all benefit! (NHS UK)',
+           zh:'🥤 <strong>嘗試減少含糖飲料！</strong> 即使每天一杯含糖飲料在糖分方面也會快速累積。大多數時候用水代替汽水、珍珠奶茶和果汁。你的牙齒、能量水平和注意力都會受益！（英國NHS）' }
   },
+
+  /* Q5 — Chocolate and sweets (UPDATED: was MC knowledge about protein) */
+  { cat:'nutrition', type:'freq',
+    en:{ q:'How often do you eat chocolate, sweets or sugary snacks (such as gummy candies, lollipops or sweet biscuits) in a typical week? 🍫',
+         opts:['Rarely or never 🌟','Once or twice 😊','Most days 😬','Every day 😰'],
+         fact:'🍫 Sugary snacks cause your blood sugar to spike quickly — which gives you a burst of energy followed by a sudden crash! Choosing snacks like fruit, plain nuts, yoghurt or crackers with cheese gives you steadier, longer-lasting energy throughout the day. (NHS UK)' },
+    zh:{ q:'你在典型的一週裡多常吃巧克力、糖果或含糖零食（如軟糖、棒棒糖或甜餅乾）？🍫',
+         opts:['很少或從不 🌟','一兩次 😊','大多數日子 😬','每天 😰'],
+         fact:'🍫 含糖零食會導致你的血糖迅速飆升——這會給你帶來一陣能量爆發，然後突然崩潰！選擇水果、原味堅果、酸奶或配乾酪的餅乾等零食，可以為你提供全天更穩定、更持久的能量。（英國NHS）' },
+    scores:[2,1,0,0], tipFor:[2,3],
+    tips:{ en:'🍫 <strong>Try to limit daily sugary snacks!</strong> Chocolate and sweets are high in sugar and saturated fat. Enjoy them as an occasional treat rather than an everyday habit. Try swapping to fruit, yoghurt or plain nuts for your daily snack! (NHS UK)',
+           zh:'🍫 <strong>嘗試限制日常含糖零食！</strong> 巧克力和糖果富含糖分和飽和脂肪。把它們作為偶爾的享受而不是日常習慣。嘗試用水果、酸奶或原味堅果作為日常零食！（英國NHS）' }
+  },
+
+  /* Q6 — Processed snacks */
   { cat:'nutrition', type:'freq',
     en:{ q:'How often do you eat processed or packaged snacks (such as crisps, instant noodles or sweet biscuits)? 📦',
          opts:['Never 🌟','Sometimes (once or twice a week) 😊','Most days 😬','Every day 😰'],
-         fact:'📦 Processed foods often contain hidden salt, sugar and unhealthy fats. Fresh snacks — like fruit, plain nuts, yoghurt or raw vegetables — are much better for your body and your brain! The WHO recommends limiting ultra-processed foods.' },
+         fact:'📦 Processed foods often contain hidden salt, sugar and unhealthy fats that are not always obvious from looking at the packet. Fresh snacks — like fruit, plain nuts, yoghurt or raw vegetables — are a much better choice for your body and your brain! The WHO recommends limiting ultra-processed foods.' },
     zh:{ q:'你多常吃加工或包裝零食（如薯片、即食麵或甜餅乾）？📦',
          opts:['從不 🌟','有時（每週一兩次）😊','大多數日子 😬','每天 😰'],
-         fact:'📦 加工食品通常含有隱藏的鹽、糖和不健康的脂肪。新鮮零食——如水果、原味堅果、酸奶或生蔬菜——對你的身體和大腦好得多！世界衛生組織建議限制超加工食品。' },
+         fact:'📦 加工食品通常含有隱藏的鹽、糖和不健康的脂肪，這些從看包裝上並不總是很明顯。新鮮零食——如水果、原味堅果、酸奶或生蔬菜——對你的身體和大腦是更好的選擇！世界衛生組織建議限制超加工食品。' },
     scores:[2,1,0,0], tipFor:[2,3],
-    tips:{ en:'📦 <strong>Swap to healthier snacks!</strong> Try fresh fruit, plain nuts, yoghurt or vegetable sticks instead of processed snacks. Processed foods are high in salt and sugar, which affect your energy and concentration. (WHO)',
-           zh:'📦 <strong>換成更健康的零食！</strong> 嘗試新鮮水果、原味堅果、酸奶或蔬菜條，而不是加工零食。加工食品富含鹽和糖，這可能會影響你的能量和注意力。（世界衛生組織）' }
+    tips:{ en:'📦 <strong>Swap to healthier snacks!</strong> Try fresh fruit, plain nuts, yoghurt or vegetable sticks instead of processed snacks. Processed foods are high in salt and sugar, which can affect your energy and concentration throughout the day. (WHO)',
+           zh:'📦 <strong>換成更健康的零食！</strong> 嘗試新鮮水果、原味堅果、酸奶或蔬菜條，而不是加工零食。加工食品富含鹽和糖，這可能會影響你全天的能量和注意力。（世界衛生組織）' }
   },
-  { cat:'nutrition', type:'tf',
-    en:{ q:'True or False: Eating a nutritious breakfast helps you concentrate better at school. 🍳',
-         fact:'🍳 TRUE! Research shows that children who eat a nutritious breakfast tend to concentrate better, have more energy and perform better at school throughout the day. Try porridge, eggs, wholegrain toast or fruit with yoghurt. (NHS UK)' },
-    zh:{ q:'對或錯：吃營養豐富的早餐有助於你在學校更好地集中注意力。🍳',
-         fact:'🍳 真的！研究表明，吃營養豐富早餐的兒童往往注意力更集中，精力更充沛，全天在學校表現更好。嘗試燕麥粥、雞蛋、全麥吐司或水果配酸奶。（英國NHS）' },
-    scores:{ true:2, false:0 }, correct:'true', tipFor:'false',
-    tips:{ en:'🍳 <strong>Do not skip breakfast!</strong> A nutritious breakfast fuels your brain for the school day. Try porridge, wholegrain toast, eggs or fruit with yoghurt. Even something small is better than nothing! (NHS UK)',
-           zh:'🍳 <strong>不要不吃早餐！</strong> 營養豐富的早餐為你的大腦提供上學日所需的燃料。嘗試燕麥粥、全麥吐司、雞蛋或水果配酸奶。即使是一點點也比什麼都不吃好！（英國NHS）' }
+
+  /* Q7 — Breakfast (UPDATED: was T/F knowledge) */
+  { cat:'nutrition', type:'freq',
+    en:{ q:'How often do you eat breakfast before coming to school? 🍳',
+         opts:['Never 😬','Sometimes 🙂','Most days 😊','Every day! 🌟'],
+         fact:'🍳 After sleeping all night, your body\'s energy stores are at their lowest point of the day! Even a simple breakfast — like toast, a banana, a bowl of cereal or some yoghurt — gives your brain the fuel it needs to start concentrating and learning. (NHS UK)' },
+    zh:{ q:'你多常在上學前吃早餐？🍳',
+         opts:['從不 😬','有時 🙂','大多數日子 😊','每天！🌟'],
+         fact:'🍳 整夜睡覺後，你身體的能量儲備處於一天中最低點！即使是簡單的早餐——如吐司、香蕉、一碗麥片或一些酸奶——也能給你的大腦提供開始集中注意力和學習所需的燃料。（英國NHS）' },
+    scores:[0,1,2,2], tipFor:[0,1],
+    tips:{ en:'🍳 <strong>Try not to skip breakfast!</strong> Even something small — a piece of fruit, some yoghurt or a slice of wholegrain toast — helps fuel your brain for the school day. Skipping breakfast can leave you feeling tired and unfocused by mid-morning! (NHS UK)',
+           zh:'🍳 <strong>嘗試不要不吃早餐！</strong> 即使是一點點——一片水果、一些酸奶或一片全麥吐司——也有助於為你的大腦提供上學日所需的燃料。不吃早餐可能會讓你在上午中段感到疲倦和注意力不集中！（英國NHS）' }
   },
 
   /* ---- EXERCISE Q8–Q14 ---- */
+
+  /* Q8 — Daily activity minutes (UPDATED: was MC knowledge about 60 min recommendation) */
   { cat:'exercise', type:'mc',
-    en:{ q:'How many minutes of physical activity should children your age aim for each day? 🏃',
-         opts:['15 minutes','30 minutes','60 minutes 🌟','90 minutes'],
-         fact:'🏃 The World Health Organisation recommends children aged 5 to 17 get at least 60 minutes of moderate to vigorous physical activity every day! Any movement counts — sport, dancing, cycling or active play.' },
-    zh:{ q:'你這個年齡的兒童每天應該目標多少分鐘的體育活動？🏃',
-         opts:['15分鐘','30分鐘','60分鐘 🌟','90分鐘'],
-         fact:'🏃 世界衛生組織建議5至17歲的兒童每天進行至少60分鐘的中等至劇烈體育活動！任何運動都算——運動、跳舞、騎自行車或積極玩耍。' },
-    scores:[0,1,2,1], tipFor:[0,1],
-    tips:{ en:'🏃 <strong>Aim for 60 minutes of activity a day!</strong> The WHO recommends at least 60 minutes of moderate to vigorous physical activity daily for your age group. Try breaking it into smaller chunks throughout the day! (WHO)',
-           zh:'🏃 <strong>目標每天60分鐘的活動！</strong> 世界衛生組織建議你這個年齡段每天進行至少60分鐘的中等至劇烈體育活動。嘗試將其分成一天中的幾個小塊！（世界衛生組織）' }
+    en:{ q:'On a typical school day, roughly how long do you spend being physically active — sport, running, cycling, dancing or active play? 🏃',
+         opts:['Less than 20 minutes 😰','About 20 to 40 minutes 😬','About 40 to 60 minutes 😊','60 minutes or more! 🌟'],
+         fact:'🌍 There are so many brilliant ways to be active! Swimming, cycling, dancing, skateboarding, martial arts, basketball, hiking and even a brisk walk around your neighbourhood all count. The most important thing is to find something you genuinely enjoy and keep doing it! (WHO)' },
+    zh:{ q:'在典型的上學日，你大概花多長時間進行體育活動——運動、跑步、騎車、跳舞或積極玩耍？🏃',
+         opts:['少於20分鐘 😰','大約20至40分鐘 😬','大約40至60分鐘 😊','60分鐘或以上！🌟'],
+         fact:'🌍 有很多很棒的方式可以保持活躍！游泳、騎自行車、跳舞、滑板、武術、籃球、遠足甚至在你的社區快步走都算。最重要的是找到你真正喜歡的活動並堅持下去！（世界衛生組織）' },
+    scores:[0,1,1,2], tipFor:[0,1],
+    tips:{ en:'🏃 <strong>Try to be more active every day!</strong> Even breaking movement into smaller chunks works well — walk at break time, take the stairs and try a new activity after school. Every bit of movement adds up towards your daily goal! (WHO)',
+           zh:'🏃 <strong>嘗試每天更活躍！</strong> 即使將運動分成較小的部分也很有效——在休息時間散步、走樓梯並在放學後嘗試新活動。每一點運動都能累積！（世界衛生組織）' }
   },
+
+  /* Q9 — School day activity self-assessment */
   { cat:'exercise', type:'mc',
     en:{ q:'On most school days, how physically active would you honestly say you are? 🎽',
          opts:['I mostly sit or lie down 😴','I move around a little 🚶','I am active for about 30 minutes 🙂','I am active for 60 minutes or more 🌟'],
-         fact:'🎽 Any movement is better than none! Even light activity like walking helps your circulation, mood and concentration. The goal is to build towards 60 minutes of moderate activity each day. Start where you are and build up from there! (WHO and NHS UK)' },
+         fact:'🎽 Any movement is better than none! Even light activity like walking helps your circulation, mood and concentration. The goal is to build towards 60 minutes of moderate activity each day — start where you are and build up gradually from there! (WHO and NHS UK)' },
     zh:{ q:'在大多數上學日，你誠實地說你的體育活動量如何？🎽',
          opts:['我主要是坐著或躺著 😴','我稍微走動一下 🚶','我活動大約30分鐘 🙂','我活動60分鐘或以上 🌟'],
-         fact:'🎽 任何運動都比不動好！即使是輕度活動，如散步，也有助於你的循環、情緒和注意力。目標是每天逐步建立到60分鐘的中等活動。從你所在的地方開始，逐步建立！（世界衛生組織和英國NHS）' },
+         fact:'🎽 任何運動都比不動好！即使是輕度活動，如散步，也有助於你的循環、情緒和注意力。目標是每天逐步建立到60分鐘的中等活動——從你所在的地方開始，逐步建立！（世界衛生組織和英國NHS）' },
     scores:[0,0,1,2], tipFor:[0,1,2],
-    tips:{ en:'🎽 <strong>Try to move more every day!</strong> Start small — take the stairs, walk during break time, or join an after-school sports club. Every bit of movement adds up towards your daily goal! (WHO and NHS UK)',
-           zh:'🎽 <strong>嘗試每天多活動！</strong> 從小事做起——走樓梯、在課間休息時散步，或加入課後運動俱樂部。每一點運動都能累積！（世界衛生組織和英國NHS）' }
+    tips:{ en:'🎽 <strong>Try to move more every day!</strong> Start small — take the stairs, walk during break time or join an after-school sports club. Every bit of movement adds up and makes a real difference to how you feel and focus at school! (WHO and NHS UK)',
+           zh:'🎽 <strong>嘗試每天多活動！</strong> 從小事做起——走樓梯、在課間休息時散步，或加入課後運動俱樂部。每一點運動都能累積，對你在學校的感受和專注程度有真正的影響！（世界衛生組織和英國NHS）' }
   },
-  { cat:'exercise', type:'tf',
-    en:{ q:'True or False: Sitting for long periods (such as during screen time) can be harmful, even if you also exercise at other times of the day. 🪑',
-         fact:'🪑 TRUE! Research shows that prolonged sitting is harmful even for active people. The NHS recommends breaking up long sitting periods with short movement breaks every 30 minutes. Try standing up, stretching or doing a few star jumps!' },
-    zh:{ q:'對或錯：長時間坐著（例如在使用屏幕時）可能有害，即使你在一天的其他時間也鍛煉。🪑',
-         fact:'🪑 真的！研究表明，長時間坐著對活躍的人也有害。英國NHS建議每30分鐘通過短暫的運動休息來打破長時間坐著。嘗試站起來、伸展或做幾個開合跳！' },
-    scores:{ true:2, false:0 }, correct:'true', tipFor:'false',
-    tips:{ en:'🪑 <strong>Break up your sitting time!</strong> Even if you exercise daily, sitting for long stretches is bad for you. Try to stand up, stretch or move every 30 minutes. Your body will feel much better for it! (NHS UK)',
-           zh:'🪑 <strong>打斷你的久坐時間！</strong> 即使你每天鍛煉，長時間坐著對你有害。嘗試每30分鐘站起來、伸展或活動。你的身體會因此感覺好得多！（英國NHS）' }
+
+  /* Q10 — Recreational screen time (UPDATED: was T/F knowledge about sitting) */
+  { cat:'exercise', type:'mc',
+    en:{ q:'On a typical day, how many hours do you spend on screens for fun — watching videos, gaming or browsing? 📱',
+         opts:['1 hour or less 🌟','About 1 to 2 hours 😊','About 3 to 4 hours 😬','5 or more hours 😰'],
+         fact:'📱 Taking a short movement break every 30 minutes makes a real difference to how your body feels! Try standing up, doing some stretches or going for a quick walk — your muscles, joints and brain will all thank you for it. (NHS UK)' },
+    zh:{ q:'在典型的一天，你花多少小時在屏幕上娛樂——看視頻、打遊戲或瀏覽？📱',
+         opts:['1小時或以下 🌟','大約1至2小時 😊','大約3至4小時 😬','5小時或以上 😰'],
+         fact:'📱 每30分鐘進行短暫的運動休息對你的身體感受有真正的差異！嘗試站起來、做一些伸展或去快速走動——你的肌肉、關節和大腦都會感謝你。（英國NHS）' },
+    scores:[2,2,1,0], tipFor:[2,3],
+    tips:{ en:'📱 <strong>Try to cut down on recreational screen time!</strong> Long hours on screens replace time that could be spent being active, sleeping or connecting with friends. Try setting yourself a daily screen-time limit and taking regular movement breaks every 30 minutes. (WHO and HK Dept of Health)',
+           zh:'📱 <strong>嘗試減少娛樂屏幕時間！</strong> 長時間使用屏幕會取代本可以用來保持活躍、睡眠或與朋友聯繫的時間。嘗試為自己設定每日屏幕時間限制，並每30分鐘進行定期運動休息。（世界衛生組織和香港衛生署）' }
   },
+
+  /* Q11 — Active travel */
   { cat:'exercise', type:'mc',
     en:{ q:'How do you usually travel to and from school? 🚶',
          opts:['I walk or cycle 🚲 🌟','I take the bus or MTR 🚇','I travel by car 🚗','Another way (e.g. school bus) 🚌'],
-         fact:'🚶 Active travel — like walking or cycling to school — is a brilliant way to build extra movement into your day! Even walking part of your journey counts. In Hong Kong, many students take the MTR — try adding a short walk at either end! 🇭🇰' },
+         fact:'🚶 Active travel — like walking or cycling to school — is a brilliant way to build extra movement into your day! Even walking part of your journey counts. In Hong Kong, many students take the MTR — try adding a short walk at either end of your trip! 🇭🇰' },
     zh:{ q:'你通常如何上下學？🚶',
          opts:['我步行或騎自行車 🚲 🌟','我乘坐巴士或港鐵 🚇','我乘坐汽車 🚗','另一種方式（例如校巴）🚌'],
-         fact:'🚶 積極的交通方式——如步行或騎自行車上學——是在你的一天中增加額外運動的絕佳方式！即使步行部分行程也算數。在香港，許多學生乘坐港鐵——嘗試在兩端增加短暫的步行！🇭🇰' },
+         fact:'🚶 積極的交通方式——如步行或騎自行車上學——是在你的一天中增加額外運動的絕佳方式！即使步行部分行程也算數。在香港，許多學生乘坐港鐵——嘗試在旅途兩端增加短暫的步行！🇭🇰' },
     scores:[2,1,0,1], tipFor:[2],
-    tips:{ en:'🚗 <strong>Try to add active travel where you can!</strong> If you travel by car or school bus, try to walk part of the way or take the stairs instead of the lift when you arrive at school. Every step counts! (NHS UK)',
-           zh:'🚗 <strong>嘗試在可以的地方增加積極的交通方式！</strong> 如果你乘坐汽車或校巴，嘗試步行部分路程，或在到達學校時走樓梯而不是乘電梯。每一步都算數！（英國NHS）' }
+    tips:{ en:'🚗 <strong>Try to add some active travel where you can!</strong> If you travel by car or school bus, try to walk part of the way or take the stairs instead of the lift when you arrive at school. Every step counts towards your daily movement goal! (NHS UK)',
+           zh:'🚗 <strong>嘗試在可以的地方增加積極的交通方式！</strong> 如果你乘坐汽車或校巴，嘗試步行部分路程，或在到達學校時走樓梯而不是乘電梯。每一步都算入你的每日運動目標！（英國NHS）' }
   },
+
+  /* Q12 — Outside school sport */
   { cat:'exercise', type:'freq',
     en:{ q:'How often do you take part in sports, active games or exercise outside of school? ⚽',
          opts:['Never 😬','Sometimes 🙂','Most days 😊','Every day! 🌟'],
-         fact:'⚽ Playing sport is great for your body AND your friendships! Team sports help you build fitness and social skills at the same time. Hong Kong has brilliant facilities for swimming, football, tennis and martial arts! 🇭🇰' },
+         fact:'⚽ Playing sport is great for your body AND your friendships! Team sports help you build fitness and social skills at the same time. Hong Kong has brilliant facilities for swimming, football, tennis, basketball and martial arts — there really is something for everyone! 🇭🇰' },
     zh:{ q:'你多常在學校以外參加運動、積極遊戲或鍛煉？⚽',
          opts:['從不 😬','有時 🙂','大多數日子 😊','每天！🌟'],
-         fact:'⚽ 參與運動對你的身體和友誼都很棒！團隊運動幫助你同時建立體能和社交技能。香港有出色的游泳、足球、網球和武術設施！🇭🇰' },
+         fact:'⚽ 參與運動對你的身體和友誼都很棒！團隊運動幫助你同時建立體能和社交技能。香港有出色的游泳、足球、網球、籃球和武術設施——每個人都能找到適合自己的！🇭🇰' },
     scores:[0,1,2,2], tipFor:[0,1],
-    tips:{ en:'⚽ <strong>Get active outside school!</strong> Find a sport or activity you enjoy — swimming, martial arts, dancing, cycling or a family walk. Being active outside school hours is just as important as PE class! (WHO)',
-           zh:'⚽ <strong>在學校以外保持活躍！</strong> 找一個你喜歡的運動或活動——游泳、武術、跳舞、騎自行車或家庭散步。在學校以外保持活躍與體育課同樣重要！（世界衛生組織）' }
+    tips:{ en:'⚽ <strong>Get active outside school!</strong> Find a sport or activity you enjoy — swimming, martial arts, dancing, cycling or a family walk. Being active outside school hours is just as important as PE class! Try something new this week. (WHO)',
+           zh:'⚽ <strong>在學校以外保持活躍！</strong> 找一個你喜歡的運動或活動——游泳、武術、跳舞、騎自行車或家庭散步。在學校以外保持活躍與體育課同樣重要！本週嘗試一些新事物。（世界衛生組織）' }
   },
-  { cat:'exercise', type:'tf',
-    en:{ q:'True or False: Exercise can help improve your mood and reduce feelings of stress and worry. 😊',
-         fact:"😊 Absolutely TRUE! When you exercise, your brain releases chemicals called endorphins — your body's own natural mood boosters. Even just a 10-minute walk can reduce feelings of stress. This is supported by both the NHS and WHO!" },
-    zh:{ q:'對或錯：運動可以幫助改善你的情緒並減少壓力和擔憂的感覺。😊',
-         fact:'😊 絕對是真的！當你運動時，你的大腦會釋放稱為內啡肽的化學物質——你身體自己的天然情緒提升劑。即使只是10分鐘的散步也可以減少壓力感。這得到英國NHS和世界衛生組織的支持！' },
-    scores:{ true:2, false:0 }, correct:'true', tipFor:'false',
-    tips:{ en:'😊 <strong>Remember — exercise is a mood booster!</strong> When you feel stressed or low, try some physical activity. Even a short walk or a bit of dancing releases natural mood-boosting chemicals in your brain! (NHS UK and WHO)',
-           zh:'😊 <strong>記住——運動能提升情緒！</strong> 當你感到壓力或情緒低落時，嘗試一些體育活動。即使是短暫的散步或一點跳舞也會在你的大腦中釋放天然的情緒提升化學物質！（英國NHS和世界衛生組織）' }
-  },
+
+  /* Q13 — Stress and mood coping (UPDATED: was T/F knowledge about exercise and mood) */
   { cat:'exercise', type:'mc',
-    en:{ q:'Which of the following best describes "moderate-intensity exercise"? 🫀',
-         opts:['Sitting and reading 📚','Watching television 📺','Brisk walking, swimming or cycling 🏊 🌟','Standing still 🧍'],
-         fact:'🫀 Moderate-intensity exercise means your heart beats faster and you breathe more quickly, but you can still hold a short conversation. Examples include brisk walking, swimming, cycling and dancing. (NHS UK)' },
-    zh:{ q:'以下哪個最能描述「中等強度運動」？🫀',
-         opts:['坐著閱讀 📚','看電視 📺','快步走、游泳或騎自行車 🏊 🌟','站立不動 🧍'],
-         fact:'🫀 中等強度運動意味著你的心跳加快，呼吸更急促，但你仍然可以進行簡短的對話。例子包括快步走、游泳、騎自行車和跳舞。（英國NHS）' },
-    scores:[0,0,2,0], tipFor:[0,1,3],
-    tips:{ en:'🫀 <strong>Learn what counts as exercise!</strong> Moderate exercise means your heart beats faster and you breathe more quickly. Great examples are brisk walking, swimming, cycling and dancing. Try to include some vigorous activity too — like running or sport! (NHS UK)',
-           zh:'🫀 <strong>了解什麼算作運動！</strong> 中等運動意味著你的心跳加快，呼吸更急促。很好的例子包括快步走、游泳、騎自行車和跳舞。也嘗試包括一些劇烈活動——如跑步或運動！（英國NHS）' }
+    en:{ q:'When you feel stressed, worried or in a low mood, what do you usually do? 😤',
+         opts:['Get up and move — go for a walk, dance or play outside 🏃 🌟','Talk to a friend, family member or someone I trust 😊 🌟','Use my phone, watch videos or play video games 📱','Sit quietly and keep my feelings to myself 😔'],
+         fact:'😊 Moving your body and connecting with people you trust are two of the most powerful ways to look after your mental wellbeing. At ISF, the virtue of Ren (仁) — Compassion and Kindness — encourages us to be caring and kind towards ourselves as well as others. (NHS UK and ISF Academy)' },
+    zh:{ q:'當你感到壓力、擔憂或情緒低落時，你通常會怎麼做？😤',
+         opts:['起身活動——去散步、跳舞或在外面玩耍 🏃 🌟','和朋友、家人或我信任的人交談 😊 🌟','使用手機、看視頻或玩電子遊戲 📱','靜靜地坐著，把感受藏在心裡 😔'],
+         fact:'😊 活動身體和與你信任的人保持聯繫，是支持心理健康的兩種最有力的方式。在弘立，仁德——慈悲與善良——鼓勵我們對自己和他人都充滿關愛和善意。（英國NHS和弘立書院）' },
+    scores:[2,2,0,0], tipFor:[2,3],
+    tips:{ en:'😔 <strong>Find healthy ways to handle stress!</strong> When you feel low or worried, try getting active, spending time outdoors or talking to someone you trust. Using screens to cope might feel comforting in the moment but rarely makes you feel truly better. It is always okay to ask for help. 💙 (NHS UK)',
+           zh:'😔 <strong>找到健康的方式處理壓力！</strong> 當你感到情緒低落或擔憂時，嘗試保持活躍、在戶外度過時光或與你信任的人交談。用屏幕來應對壓力在當下可能感覺舒適，但很少能讓你真正感覺更好。尋求幫助是完全沒問題的。💙（英國NHS）' }
+  },
+
+  /* Q14 — Energy levels during the day (UPDATED: was MC knowledge about moderate exercise) */
+  { cat:'exercise', type:'mc',
+    en:{ q:'How would you honestly describe your energy levels during a typical school day? ⚡',
+         opts:['Full of energy and focused for most of the day! 🌟','Pretty good — I have some natural ups and downs 😊','I often feel sluggish or tired during lessons 😬','I struggle to stay awake and concentrate — I feel exhausted most days 😰'],
+         fact:'⚡ Your daily energy levels are closely connected to all three wellness pillars! How well you slept, what you had for breakfast and how active you have been all work together. Small, consistent improvements to each area create naturally stable energy throughout the day. (WHO and NHS UK)' },
+    zh:{ q:'你會如何誠實地描述典型上學日的精力水平？⚡',
+         opts:['一天中大部分時間精力充沛、思維清晰！🌟','還不錯——有些自然的起伏 😊','我在上課期間經常感到遲鈍或疲倦 😬','我很難保持清醒和注意力集中——大多數日子我都感到精疲力竭 😰'],
+         fact:'⚡ 你的日常精力水平與三大健康支柱密切相關！你睡得多好、你早餐吃了什麼以及你有多活躍——這些都共同起作用。對每個領域進行小而一致的改善，可以在一天中創造自然穩定的能量。（世界衛生組織和英國NHS）' },
+    scores:[2,1,0,0], tipFor:[2,3],
+    tips:{ en:'⚡ <strong>Look after your energy with all three pillars!</strong> If you regularly feel tired during the day, it may be a sign that your sleep, nutrition or activity levels need some attention. Small improvements to each area can make a big difference to how energetic you feel throughout the school day! (WHO and NHS UK)',
+           zh:'⚡ <strong>用三大支柱照顧你的能量！</strong> 如果你經常在白天感到疲倦，這可能是你的睡眠、營養或活動水平需要關注的信號。對每個領域的小改進可以對你在整個上學日感到精力充沛產生很大的差異！（世界衛生組織和英國NHS）' }
   },
 
   /* ---- SLEEP Q15–Q20 ---- */
+
+  /* Q15 — Bedtime (UPDATED: was MC knowledge about recommended hours) */
   { cat:'sleep', type:'mc',
-    en:{ q:'How many hours of sleep are recommended for children aged 9 to 10 each night? 😴',
-         opts:['6 to 7 hours 😬','7 to 8 hours 😐','9 to 11 hours 🌟','12 or more hours'],
-         fact:'😴 The NHS recommends that children aged 6 to 13 get between 9 and 11 hours of sleep every night! Sleep is when your brain sorts through everything you have learned and your body releases growth hormones. It is truly essential.' },
-    zh:{ q:'建議9至10歲兒童每晚睡多少小時？😴',
-         opts:['6至7小時 😬','7至8小時 😐','9至11小時 🌟','12小時或以上'],
-         fact:'😴 英國NHS建議6至13歲的兒童每晚睡9至11小時！睡眠時，你的大腦會整理你學到的一切，你的身體會釋放生長激素。這真的是必不可少的。' },
-    scores:[0,1,2,1], tipFor:[0,1],
-    tips:{ en:'😴 <strong>Children your age need 9 to 11 hours of sleep!</strong> Make sure you go to bed early enough to get the sleep your brain and body need. Try setting a consistent bedtime — even on weekends! (NHS UK)',
-           zh:'😴 <strong>你這個年齡的兒童需要9至11小時的睡眠！</strong> 確保你早點上床睡覺，讓你的大腦和身體得到所需的睡眠。嘗試設定一個固定的就寢時間——即使是在週末！（英國NHS）' }
+    en:{ q:'What time do you usually go to bed on a school night? 🛏️',
+         opts:['Before 9:00 pm 🌟','Between 9:00 pm and 9:30 pm 😊','Between 9:30 pm and 10:30 pm 😬','After 10:30 pm 😰'],
+         fact:'🌙 Your body has a built-in clock called the circadian rhythm! Going to bed at a consistent time each night — even at weekends — trains this internal clock to work efficiently, helping you fall asleep faster and wake up feeling much more refreshed each morning. (NHS UK)' },
+    zh:{ q:'你在上學前一晚通常幾點上床睡覺？🛏️',
+         opts:['晚上9點前 🌟','晚上9點至9點30分 😊','晚上9點30分至10點30分 😬','晚上10點30分之後 😰'],
+         fact:'🌙 你的身體有一個內置時鐘，稱為晝夜節律！每晚在一致的時間上床睡覺——即使是在週末——可以訓練這個內部時鐘高效運作，幫助你更快入睡，每天早上醒來時感到更清爽。（英國NHS）' },
+    scores:[2,2,1,0], tipFor:[2,3],
+    tips:{ en:'🛏️ <strong>Try to go to bed a little earlier!</strong> Children your age need 9 to 11 hours of sleep each night. If you need to wake up at 7:00 am for school, you should be in bed by 9:30 pm at the latest. Even going to bed just 20 minutes earlier this week is a great start! (NHS UK)',
+           zh:'🛏️ <strong>嘗試早點上床！</strong> 你這個年齡的兒童每晚需要9至11小時的睡眠。如果你需要在早上7點起床上學，你最遲應該在晚上9點30分上床。即使本週只提前20分鐘上床也是一個很好的開始！（英國NHS）' }
   },
+
+  /* Q16 — Hours of sleep */
   { cat:'sleep', type:'mc',
     en:{ q:'How many hours of sleep do you usually get on a typical school night? 🛏️',
          opts:['Less than 7 hours 😰','7 to 8 hours 😐','9 to 10 hours 😊 🌟','More than 10 hours 🌙'],
-         fact:'🛏️ Even just 30 extra minutes of sleep per night can make a real difference to how you feel and how well you concentrate! If you are getting less than 9 hours, try moving your bedtime earlier by just 15 minutes this week. (NHS UK)' },
-    zh:{ q:'在典型的上學晚上，你通常睡多少小時？🛏️',
+         fact:'🛏️ Even just 30 extra minutes of sleep per night can make a real difference to how you feel, concentrate and manage your emotions! If you are getting less than 9 hours, try moving your bedtime earlier by just 15 minutes this week and see how it feels. (NHS UK)' },
+    zh:{ q:'在典型的上學前一晚，你通常睡多少小時？🛏️',
          opts:['不到7小時 😰','7至8小時 😐','9至10小時 😊 🌟','超過10小時 🌙'],
-         fact:'🛏️ 每晚多睡30分鐘就能對你的感受和注意力產生真正的差異！如果你睡不到9小時，嘗試本週把就寢時間提前15分鐘。（英國NHS）' },
+         fact:'🛏️ 每晚多睡30分鐘就能對你的感受、注意力和情緒管理產生真正的差異！如果你睡不到9小時，嘗試本週把就寢時間提前15分鐘，看看感覺如何。（英國NHS）' },
     scores:[0,1,2,2], tipFor:[0,1],
-    tips:{ en:'🛏️ <strong>Try to get more sleep!</strong> Children aged 9 to 10 need 9 to 11 hours per night. Going to bed just 15 to 30 minutes earlier can significantly improve your concentration, mood and energy at school. (NHS UK)',
-           zh:'🛏️ <strong>嘗試多睡一些！</strong> 9至10歲的兒童每晚需要9至11小時。只需提前15至30分鐘上床可以顯著改善你在學校的注意力、情緒和能量。（英國NHS）' }
+    tips:{ en:'🛏️ <strong>Try to get more sleep each night!</strong> Children your age need 9 to 11 hours per night. Going to bed just 15 to 30 minutes earlier can significantly improve your concentration, mood and energy levels at school the next day. (NHS UK)',
+           zh:'🛏️ <strong>嘗試每晚多睡一些！</strong> 你這個年齡的兒童每晚需要9至11小時。只需提前15至30分鐘上床可以顯著改善你第二天在學校的注意力、情緒和能量水平。（英國NHS）' }
   },
-  { cat:'sleep', type:'tf',
-    en:{ q:'True or False: Using a screen (phone, tablet or TV) in the hour before bed makes it harder to fall asleep. 📵',
-         fact:'📵 TRUE! Screens emit blue light which tells your brain it is still daytime and suppresses melatonin — the hormone that makes you feel sleepy. The NHS recommends switching off all screens at least 1 hour before bedtime. Try reading, drawing or listening to calm music instead!' },
-    zh:{ q:'對或錯：在睡前一小時使用屏幕（手機、平板電腦或電視）會使你更難入睡。📵',
-         fact:'📵 真的！屏幕會發出藍光，這會告訴你的大腦現在仍然是白天，並抑制褪黑素——讓你感到困倦的激素。英國NHS建議睡前至少1小時關閉所有屏幕。嘗試閱讀、繪畫或聆聽平靜的音樂代替！' },
-    scores:{ true:2, false:0 }, correct:'true', tipFor:'false',
-    tips:{ en:'📵 <strong>Switch off screens before bed!</strong> Blue light from phones, tablets and TVs suppresses your sleep hormone. The NHS recommends at least 1 hour of screen-free time before bed. Try reading a book or drawing instead. (NHS UK)',
-           zh:'📵 <strong>睡前關閉屏幕！</strong> 手機、平板電腦和電視的藍光會抑制你的睡眠激素。英國NHS建議睡前至少1小時不使用屏幕。嘗試閱讀書籍或繪畫代替。（英國NHS）' }
-  },
+
+  /* Q17 — Screen-free time before bed (UPDATED: was T/F knowledge about screens) */
   { cat:'sleep', type:'mc',
-    en:{ q:"Which of the following describes the best bedtime routine for a good night's sleep? 🛁",
-         opts:['Play video games until you feel sleepy 🎮','Have a warm bath, then read or draw, and go to bed at the same time each night 🛁📚 🌟','Drink a sugary drink just before bed 🥤','Go to sleep at a different time each night 🤷'],
-         fact:'🛁 A consistent bedtime routine signals your brain to start producing melatonin! The NHS recommends a calming routine — such as a warm bath, some reading or light drawing — followed by the same bedtime every single night.' },
-    zh:{ q:'以下哪個描述了良好夜間睡眠的最佳就寢程序？🛁',
-         opts:['玩電子遊戲直到你感到困倦 🎮','洗個溫水澡，然後閱讀或繪畫，每晚在同一時間上床 🛁📚 🌟','在睡前喝含糖飲料 🥤','根據你的感覺每晚在不同時間入睡 🤷'],
-         fact:'🛁 一致的就寢程序向你的大腦發出開始產生褪黑素的信號！英國NHS建議一個平靜的程序——如溫水澡、一些閱讀或輕度繪畫——然後每晚在同一時間上床。' },
-    scores:[0,2,0,0], tipFor:[0,2,3],
-    tips:{ en:'🛁 <strong>Build a relaxing bedtime routine!</strong> A warm bath, some reading or drawing, and a consistent bedtime every night signals your brain to wind down. Avoid screens, sugary snacks and exciting games close to bedtime. (NHS UK)',
-           zh:'🛁 <strong>建立一個放鬆的就寢程序！</strong> 溫水澡、一些閱讀或繪畫，以及每晚一致的就寢時間，這些都向你的大腦發出放鬆的信號。避免在就寢前使用屏幕、吃甜食和玩刺激的遊戲。（英國NHS）' }
+    en:{ q:'How long before bedtime do you usually switch off your screens (phone, tablet, TV or computer)? 📵',
+         opts:['More than 1 hour before I go to bed 🌟','About 30 to 60 minutes before bed 😊','Just a few minutes before I try to sleep 😬','I use screens right up until I fall asleep 😰'],
+         fact:'💡 Your brain needs time to gradually wind down after being stimulated by bright screens! Calm, quiet activities — like reading, drawing or listening to soothing music — in the last hour before bed help your body shift naturally into sleep mode. Even dimming the room lights helps! (NHS UK)' },
+    zh:{ q:'你通常在睡前多長時間關閉屏幕（手機、平板電腦、電視或電腦）？📵',
+         opts:['睡前超過1小時 🌟','睡前約30至60分鐘 😊','嘗試入睡前幾分鐘 😬','我一直使用屏幕直到入睡 😰'],
+         fact:'💡 在受到明亮屏幕刺激後，你的大腦需要時間逐漸放鬆下來！在睡前最後一小時進行平靜、安靜的活動——如閱讀、繪畫或聆聽舒緩的音樂——有助於你的身體自然地進入睡眠模式。即使調暗房間燈光也有幫助！（英國NHS）' },
+    scores:[2,1,0,0], tipFor:[2,3],
+    tips:{ en:'📵 <strong>Switch off screens earlier before bed!</strong> Try to stop using all screens at least 1 hour before you go to sleep. Charge your phone outside the bedroom and swap screen time for reading, drawing or some calm breathing exercises. Your sleep quality will improve noticeably! (NHS UK)',
+           zh:'📵 <strong>早點在睡前關閉屏幕！</strong> 嘗試在睡前至少1小時停止使用所有屏幕。在臥室外為手機充電，用閱讀、繪畫或一些平靜的呼吸練習取代屏幕時間。你的睡眠質量將會明顯改善！（英國NHS）' }
   },
+
+  /* Q18 — Wind-down routine (UPDATED: was MC knowledge about best bedtime routine) */
+  { cat:'sleep', type:'mc',
+    en:{ q:'What do you usually do in the 30 minutes just before you go to sleep? 🌙',
+         opts:['Read a book, draw or listen to calm music 📚 🌟','Take a warm shower or do some gentle stretching 🛁 🌟','Watch videos, scroll on my phone or play games 📱 😬','Nothing in particular — I just climb into bed 😐'],
+         fact:'🛁 A consistent wind-down routine acts like a signal to your brain that sleep is approaching! Your brain begins preparing for sleep gradually over the last hour or two before you actually fall asleep. Calm, quiet activities make this natural process happen more smoothly. (NHS UK)' },
+    zh:{ q:'你在睡前30分鐘通常做什麼？🌙',
+         opts:['閱讀書籍、繪畫或聆聽平靜的音樂 📚 🌟','洗個溫水澡或做一些輕柔的伸展 🛁 🌟','看視頻、刷手機或玩遊戲 📱 😬','沒什麼特別——我只是爬上床 😐'],
+         fact:'🛁 一致的放鬆程序就像是給你的大腦發出睡眠即將到來的信號！你的大腦在你實際入睡前的最後一兩小時逐漸開始為睡眠做準備。平靜、安靜的活動使這個自然過程更順暢地發生。（英國NHS）' },
+    scores:[2,2,0,1], tipFor:[2,3],
+    tips:{ en:'🌙 <strong>Build a calming bedtime routine!</strong> Try swapping screens for reading, drawing or some calm music in the 30 minutes before bed. A warm shower can also help you relax. A consistent, calm routine makes falling asleep much easier and improves your sleep quality! (NHS UK)',
+           zh:'🌙 <strong>建立一個平靜的就寢程序！</strong> 嘗試在睡前30分鐘用閱讀、繪畫或一些平靜的音樂取代屏幕。溫水澡也可以幫助你放鬆。一致、平靜的程序使入睡容易得多，並改善你的睡眠質量！（英國NHS）' }
+  },
+
+  /* Q19 — Screen use before bed */
   { cat:'sleep', type:'freq',
     en:{ q:'How often do you use a screen (phone, iPad or TV) in the last hour before going to bed? 📱',
          opts:['Never 🌟','Sometimes 😊','Most nights 😬','Every night 😰'],
-         fact:'📱 In Hong Kong, screen use before bed is very common among young people — and it is one of the main reasons many children do not sleep well! Even just 1 hour of screen-free time before bed can dramatically improve your sleep quality. 🇭🇰 (NHS UK and HK Dept of Health)' },
+         fact:'📱 In Hong Kong, screen use before bed is very common among young people — and it is one of the main reasons many children do not sleep as well as they could! Even just 1 hour of screen-free time before bed can dramatically improve your sleep quality. 🇭🇰 (NHS UK and HK Dept of Health)' },
     zh:{ q:'你多常在睡前最後一小時使用屏幕（手機、iPad或電視）？📱',
          opts:['從不 🌟','有時 😊','大多數晚上 😬','每晚 😰'],
-         fact:'📱 在香港，睡前使用屏幕在年輕人中非常普遍——這是許多兒童睡眠不好的主要原因之一！即使睡前只有1小時不使用屏幕，也能顯著改善你的睡眠質量。🇭🇰（英國NHS和香港衛生署）' },
+         fact:'📱 在香港，睡前使用屏幕在年輕人中非常普遍——這是許多兒童睡眠質量不如理想的主要原因之一！即使睡前只有1小時不使用屏幕，也能顯著改善你的睡眠質量。🇭🇰（英國NHS和香港衛生署）' },
     scores:[2,1,0,0], tipFor:[2,3],
-    tips:{ en:'📱 <strong>Try screen-free time before bed!</strong> Aim for at least 1 hour without screens before sleeping. Charge your devices outside your bedroom and try reading, journalling or listening to calm music instead. (NHS UK and HK Dept of Health)',
-           zh:'📱 <strong>嘗試在睡前不使用屏幕！</strong> 目標是在睡前至少1小時不使用屏幕。在臥室外為設備充電，嘗試閱讀、寫日記或聆聽平靜的音樂代替。（英國NHS和香港衛生署）' }
+    tips:{ en:'📱 <strong>Try screen-free time before bed!</strong> Aim for at least 1 hour without screens before sleeping. Charge your devices outside your bedroom and try reading, journalling or listening to calm music instead. Your sleep — and your mood the next morning — will genuinely improve! (NHS UK and HK Dept of Health)',
+           zh:'📱 <strong>嘗試在睡前不使用屏幕！</strong> 目標是在睡前至少1小時不使用屏幕。在臥室外為設備充電，嘗試閱讀、寫日記或聆聽平靜的音樂代替。你的睡眠——以及第二天早上的心情——將真正得到改善！（英國NHS和香港衛生署）' }
   },
-  { cat:'sleep', type:'tf',
-    en:{ q:"True or False: A good night's sleep helps you feel happier, more focused and better at managing your emotions at school. 🧠",
-         fact:'🧠 TRUE! When you sleep, your brain processes the emotions and experiences of the day — almost like an overnight reset! Children who sleep well tend to feel happier, manage stress better and get on more easily with friends and teachers. (NHS UK and WHO)' },
-    zh:{ q:'對或錯：良好的夜間睡眠有助於你感到更快樂、更專注，並更好地在學校管理情緒。🧠',
-         fact:'🧠 真的！當你睡覺時，你的大腦會處理當天的情緒和經歷——幾乎就像一個隔夜重置！睡眠好的兒童往往感到更快樂，更好地管理壓力，並更容易與朋友和老師相處。（英國NHS和世界衛生組織）' },
-    scores:{ true:2, false:0 }, correct:'true', tipFor:'false',
-    tips:{ en:'🧠 <strong>Sleep is essential for emotional wellbeing!</strong> When you sleep well, your brain processes your emotions and helps you manage your feelings better the next day. Make sleep a priority for both your mental and physical health! (NHS UK and WHO)',
-           zh:'🧠 <strong>睡眠對情緒健康至關重要！</strong> 當你睡得好時，你的大腦會處理你的情緒，並幫助你第二天更好地管理感受。把睡眠作為你心理和身體健康的優先事項！（英國NHS和世界衛生組織）' }
+
+  /* Q20 — How you feel waking up (UPDATED: was T/F knowledge about sleep and mood) */
+  { cat:'sleep', type:'mc',
+    en:{ q:'When you wake up for school in the morning, how do you usually feel? ☀️',
+         opts:['Refreshed and ready to take on the day! 🌟','Fairly rested — I feel okay 😊','Tired but I manage to get through 😬','Exhausted — I never feel properly rested 😰'],
+         fact:'☀️ Waking up feeling refreshed is one of the best signs that your sleep is working well for you! If you regularly wake up feeling tired, it is worth taking a closer look at your bedtime, your wind-down routine and how much screen time you have in the evening. (NHS UK)' },
+    zh:{ q:'早上起床上學時，你通常感覺如何？☀️',
+         opts:['精神煥發，準備好迎接新的一天！🌟','相當休息好了——感覺還不錯 😊','雖然疲倦但能撐過去 😬','筋疲力竭——我從不感到真正的休息 😰'],
+         fact:'☀️ 醒來時感到精神煥發是你的睡眠對你有效的最好跡象之一！如果你經常醒來感到疲倦，值得更仔細地審視你的就寢時間、你的放鬆程序以及你晚上的屏幕時間。（英國NHS）' },
+    scores:[2,2,1,0], tipFor:[2,3],
+    tips:{ en:'😴 <strong>Work on improving your sleep quality!</strong> Regularly waking up feeling tired is a sign your body is not getting the rest it needs. Try going to bed earlier, switching off screens sooner and creating a calmer evening routine. Small, consistent changes make a big difference! (NHS UK)',
+           zh:'😴 <strong>努力改善你的睡眠質量！</strong> 經常醒來感到疲倦是你的身體沒有得到所需休息的信號。嘗試早點上床、更早關閉屏幕並創造一個更平靜的夜間程序。小而一致的改變能帶來大不同！（英國NHS）' }
   }
 ];
 
@@ -953,8 +954,8 @@ const catBadge = {
   sleep:    { cls:'cs', en:'😴 Sleep',     zh:'😴 睡眠' }
 };
 const msgs = {
-  en:['Choose your answer below! 😊','Think carefully! 🤔','You are doing brilliantly! 💪','Almost there! 🌟','Take your time! 🎯'],
-  zh:['在下面選擇你的答案！😊','仔細思考！🤔','你做得很棒！💪','快到了！🌟','慢慢來！🎯']
+  en:['Choose your answer below! 😊','Think carefully — be honest! 🤔','You are doing brilliantly! 💪','Almost there! 🌟','Take your time! 🎯'],
+  zh:['在下面選擇你的答案！😊','仔細思考——誠實回答！🤔','你做得很棒！💪','快到了！🌟','慢慢來！🎯']
 };
 
 function startQuiz() {
@@ -969,8 +970,8 @@ function startQuiz() {
 }
 
 function renderQ(idx) {
-  const q    = QUESTIONS[idx];
-  const d    = q[lang] || q.en;
+  const q     = QUESTIONS[idx];
+  const d     = q[lang] || q.en;
   const saved = answers[idx];
   const pct   = ((idx + 1) / QUESTIONS.length) * 100;
 
@@ -997,7 +998,7 @@ function renderQ(idx) {
     html += '<div class="mc-grid">';
     d.opts.forEach((opt,i) => {
       const s = saved===i ? 'sel' : '';
-      html += `<button class="mc-opt ${s}" onclick="pick(${idx},${i},'mc')">
+      html += `<button class="mc-opt ${s}" onclick="pick(${idx},${i})">
                  <span class="mc-ltr">${LTR[i]}</span>${opt}
                </button>`;
     });
@@ -1008,15 +1009,15 @@ function renderQ(idx) {
     const tl = lang==='en' ? '✅ True'  : '✅ 對';
     const fl = lang==='en' ? '❌ False' : '❌ 錯';
     html += `<div class="tf-grid">
-               <button class="tf-opt tf-t ${ts}" onclick="pick(${idx},'true','tf')">${tl}</button>
-               <button class="tf-opt tf-f ${fs}" onclick="pick(${idx},'false','tf')">${fl}</button>
+               <button class="tf-opt tf-t ${ts}" onclick="pick(${idx},'true')">${tl}</button>
+               <button class="tf-opt tf-f ${fs}" onclick="pick(${idx},'false')">${fl}</button>
              </div>`;
   } else {
     const EMJ = ['😬','🙂','😊','🌟'];
     html += '<div class="freq-grid">';
     d.opts.forEach((opt,i) => {
       const s = saved===i ? 'sel' : '';
-      html += `<button class="freq-opt ${s}" onclick="pick(${idx},${i},'freq')">
+      html += `<button class="freq-opt ${s}" onclick="pick(${idx},${i})">
                  <span class="fe">${EMJ[i]}</span>${opt}
                </button>`;
     });
@@ -1090,8 +1091,8 @@ function buildResults() {
   if (total >= 30) {
     badge = '🏆';
     title = lang==='en' ? 'Wellness Champion!'  : '健康冠軍！';
-    sub   = lang==='en' ? 'Outstanding! You have brilliant healthy habits. Keep it up! 🌟'
-                        : '出色！你有出色的健康習慣。繼續保持！🌟';
+    sub   = lang==='en' ? 'Outstanding! You have brilliant healthy habits. Keep it up and keep inspiring others! 🌟'
+                        : '出色！你有出色的健康習慣。繼續保持並激勵他人！🌟';
   } else if (total >= 20) {
     badge = '🌟';
     title = lang==='en' ? 'Wellness Explorer!'  : '健康探索者！';
@@ -1100,8 +1101,8 @@ function buildResults() {
   } else {
     badge = '🌱';
     title = lang==='en' ? 'Wellness Beginner!'  : '健康新手！';
-    sub   = lang==='en' ? 'Everyone starts somewhere! Read through your tips below to begin your wellness journey. 🌱'
-                        : '每個人都有起點！閱讀下面的建議，開始你的健康之旅。🌱';
+    sub   = lang==='en' ? 'Everyone starts somewhere! Read through your tips below to begin your wellness journey. Every step counts! 🌱'
+                        : '每個人都有起點！閱讀下面的建議，開始你的健康之旅。每一步都算！🌱';
   }
 
   document.getElementById('resBadge').textContent = badge;
@@ -1140,8 +1141,8 @@ function buildTips() {
   if (tipIdxs.length === 0) {
     body.innerHTML = `<p style="text-align:center;color:var(--mid);font-size:16px;font-weight:700;padding:10px 0">
       ${lang==='en'
-        ? '🎉 Excellent! You did not trigger any improvement tips — you are already making great choices!'
-        : '🎉 出色！你沒有觸發任何改進建議——你已經做出了很好的選擇！'}
+        ? '🎉 Excellent! Your habits are already looking really strong — keep up the great work!'
+        : '🎉 出色！你的習慣已經看起來非常好——繼續保持出色的工作！'}
     </p>`;
   } else {
     tipIdxs.forEach(i => {
